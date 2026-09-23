@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    COLOR & COMPANY — PREMIUM ADULT COLORING & CRAFT NIGHT SOCIAL CLUB
    style.css — Complete Design System
    ============================================================ */
@@ -150,6 +150,11 @@
 [data-theme="light"] .page-hero__desc,
 [data-theme="light"] .hero-split__subtitle {
   color: rgba(255, 255, 255, 0.8) !important;
+}
+
+[data-theme="light"] .hero-split__tag {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
 }
 
 [data-theme="light"] .navbar__login {
@@ -681,7 +686,7 @@ h6 {
 [dir="rtl"] .mobile-drawer {
   inset-inline-end: auto;
   inset-inline-start: 0;
-  transform: translateX(-100%);
+  transform: translateX(100%);
 }
 
 .mobile-drawer.open {
@@ -1528,6 +1533,12 @@ h6 {
   gap: var(--space-sm);
 }
 
+@media (max-width: 1024px) {
+  .gallery-masonry {
+    columns: 2;
+  }
+}
+
 .gallery-item {
   break-inside: avoid;
   position: relative;
@@ -1678,11 +1689,25 @@ h6 {
   flex-wrap: wrap;
 }
 
+@media (max-width: 480px) {
+  .cta-section__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 /* Dark CTA */
 .cta-dark {
   background: linear-gradient(rgba(42, 32, 40, 0.85), rgba(42, 32, 40, 0.85)), url('../images/hero-coloring.webp') center/cover no-repeat;
   padding-block: var(--space-2xl);
   text-align: center;
+}
+
+@media (max-width: 480px) {
+  .cta-dark .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .cta-dark .cta-section__title {
@@ -1876,7 +1901,7 @@ h6 {
 }
 
 .night-selector__panel-image {
-  aspect-ratio: 1;
+  height: 100%;
   overflow: hidden;
   background: var(--color-surface-2);
 }
@@ -2204,6 +2229,26 @@ h6 {
   background: var(--color-bg);
 }
 
+.dashboard-content {
+  padding: var(--space-xl);
+}
+
+@media (max-width: 1024px) {
+  .dashboard-content {
+    padding: var(--space-md);
+  }
+  .dashboard-desktop-header {
+    display: none !important;
+  }
+  .dashboard-mobile-toggles {
+    display: flex !important;
+  }
+}
+
+.dashboard-mobile-toggles {
+  display: none;
+}
+
 /* Dashboard Topbar */
 .dashboard-topbar {
   height: var(--topbar-height);
@@ -2330,7 +2375,7 @@ h6 {
 /* Dashboard Widgets Grid */
 .dashboard-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
   gap: var(--space-md);
 }
 
@@ -3105,7 +3150,7 @@ h6 {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-primary);
+  color: #fff;
   margin-bottom: var(--space-xs);
 }
 
@@ -3119,7 +3164,7 @@ h6 {
 
 .event-type-card__desc {
   font-size: var(--text-sm);
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
 }
 
@@ -3252,6 +3297,22 @@ h6 {
   justify-content: center;
   padding: var(--space-2xl) var(--space-xl);
   overflow-y: auto;
+}
+
+.auth-container {
+  background: var(--color-bg);
+  padding: var(--space-xl);
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  max-width: 440px;
+  width: 100%;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    padding: var(--space-md);
+  }
 }
 
 .login-logo {
@@ -3485,7 +3546,7 @@ h6 {
   inset-inline-end: var(--space-lg);
   width: 48px;
   height: 48px;
-  background: linear-gradient(rgba(42, 32, 40, 0.85), rgba(42, 32, 40, 0.85)), url('../images/hero-coloring.webp') center/cover no-repeat;
+  background: var(--color-surface);
   color: var(--color-text);
   border-radius: var(--border-radius-md);
   display: flex;
@@ -4114,15 +4175,30 @@ img[src=""] {
   line-height: 1.65;
 }
 
+@media (max-width: 1024px) {
+  .benefits-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .benefits-grid > *:nth-child(1) { grid-column: 1 / 3; }
+  .benefits-grid > *:nth-child(2) { grid-column: 3 / 5; }
+  .benefits-grid > *:nth-child(3) { grid-column: 2 / 4; }
+}
+
 @media (max-width: 768px) {
   .benefits-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
   }
+  .benefits-grid > *:nth-child(1) { grid-column: 1 / 3; }
+  .benefits-grid > *:nth-child(2) { grid-column: 3 / 5; }
+  .benefits-grid > *:nth-child(3) { grid-column: 2 / 4; }
 }
 
 @media (max-width: 480px) {
   .benefits-grid {
     grid-template-columns: 1fr;
+  }
+  .benefits-grid > * {
+    grid-column: 1 / -1 !important;
   }
 }
 
@@ -4567,10 +4643,16 @@ img[src=""] {
   }
 }
 
-
-
-
-
+@media (max-width: 480px) {
+  .dashboard-card__body .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  .auth-options {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
 
 
 

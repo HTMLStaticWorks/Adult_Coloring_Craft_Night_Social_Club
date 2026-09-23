@@ -1879,8 +1879,8 @@ const SessionsPageManager = (() => {
         </div>
         <div class="session-row__actions">
           <div class="session-price">${s.price}<span> per seat</span></div>
-          <button class="btn btn-sm btn-outline" data-session-detail="${s.id}">View Session</button>
-          <button class="btn btn-sm btn-primary" data-session-detail="${s.id}">Book Seat →</button>
+          <button class="btn btn-sm btn-outline" data-session-detail="${s.id}" style="width: 140px; justify-content: center;">View Session</button>
+          <button class="btn btn-sm btn-primary" data-session-detail="${s.id}" style="width: 140px; justify-content: center;">Book Seat →</button>
         </div>
       </div>
     `).join('');
