@@ -1,0 +1,453 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Member Dashboard | Color & Company</title>
+  <meta name="description" content="Color & Company Member Dashboard">
+  <link rel="canonical" href="dashboard.html">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+
+<body data-page="dashboard" class="dashboard-layout">
+
+  <!-- Topbar -->
+
+
+  <!-- Mobile Topbar -->
+  <header class="dashboard-mobile-topbar">
+    <a href="index.html" style="display:flex; align-items:center; gap:8px; text-decoration:none;">
+      <svg class="navbar__logo-mark" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
+        <circle cx="21" cy="21" r="20" stroke="#C96F61" stroke-width="1.5" fill="none"></circle>
+        <path d="M12 28 Q14 16 21 13 Q28 10 30 21 Q32 30 21 32 Q14 34 12 28Z" stroke="var(--color-text)"
+          stroke-width="1.2" fill="none"></path>
+        <line x1="8" y1="21" x2="34" y2="21" stroke="#C96F61" stroke-width="0.8" stroke-dasharray="2 2"></line>
+        <path d="M17 34 L19 26 L21 34" stroke="var(--color-text)" stroke-width="1.2" fill="none" stroke-linecap="round">
+        </path>
+      </svg>
+      <span class="sidebar__logo-name">Color & Company</span>
+    </a>
+    <button class="btn-icon"
+      onclick="document.querySelector('.sidebar').classList.toggle('active'); document.getElementById('sidebar-overlay').classList.toggle('active');"
+      aria-label="Toggle Navigation">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+  </header>
+  <div class="dashboard-wrapper">
+    <!-- Sidebar -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <aside class="sidebar">
+      <div class="sidebar__header" style="padding: 16px; margin-top: 24px;">
+        <a href="index.html" class="sidebar__header-logo" style="text-decoration:none; align-items:center; gap:8px;">
+          <svg class="navbar__logo-mark" viewBox="0 0 42 42" fill="none" >
+            <circle cx="21" cy="21" r="20" stroke="#C96F61" stroke-width="1.5" fill="none" />
+            <path d="M12 28 Q14 16 21 13 Q28 10 30 21 Q32 30 21 32 Q14 34 12 28Z" stroke="var(--color-text)"
+              stroke-width="1.2" fill="none" />
+            <line x1="8" y1="21" x2="34" y2="21" stroke="#C96F61" stroke-width="0.8" stroke-dasharray="2 2" />
+          </svg>
+          <div>
+            <div class="sidebar__logo-name">Color & Company</div>
+
+          </div>
+        </a>
+        <div class="sidebar__header-close" style="justify-content: flex-end;">
+          <button class="btn-icon"
+            onclick="document.querySelector('.sidebar').classList.remove('active'); document.getElementById('sidebar-overlay').classList.remove('active');"
+            aria-label="Close Sidebar" style="color: var(--color-text);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Sidebar User Info -->
+      <div
+        style="text-align: center; margin: 24px 16px; padding-bottom: 24px; border-bottom: 1px solid rgba(244, 238, 229, 0.08);">
+        <div
+          style="width: 70px; height: 70px; border-radius: 50%; background: var(--color-primary); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+          AD
+        </div>
+        <h6 style="color: var(--color-text); font-weight: 600; margin-bottom: 4px; font-size: 1rem;">Alex Doe</h6>
+        <p style="color: var(--color-text-muted); font-size: 0.75rem; margin-bottom: 0;">Member ID: #98421</p>
+      </div>
+      <nav class="sidebar__nav">
+        <a href="dashboard.html" class="sidebar__nav-link active" onclick="switchTab(event, 'home')"><span
+            class="sidebar__nav-link-icon">⌂</span> Dashboard</a>
+        <a href="#" class="sidebar__nav-link" onclick="switchTab(event, 'bookings')"><span
+            class="sidebar__nav-link-icon">📅</span> My Bookings</a>
+        <a href="#" class="sidebar__nav-link" onclick="switchTab(event, 'membership')"><span
+            class="sidebar__nav-link-icon">🎫</span> Membership & Usage</a>
+
+        <a href="#" class="sidebar__nav-link" onclick="switchTab(event, 'billing')"><span
+            class="sidebar__nav-link-icon">💳</span> Billing & Plan</a>
+        <a href="#" class="sidebar__nav-link" onclick="switchTab(event, 'profile')"><span
+            class="sidebar__nav-link-icon">⚙️</span> Settings & Profile</a>
+      </nav>
+      <div class="sidebar__footer" style="margin-top:auto;">
+        <a href="index.html" class="sidebar__nav-link" style="color: #dc3545 !important; margin-top: 16px;"><span
+            class="sidebar__nav-link-icon">🚪</span> Sign Out</a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard__main">
+      <!-- Dashboard Top Header -->
+      <header
+        style="background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: 12px var(--space-xl); display: flex; justify-content: flex-end; align-items: center;">
+        <div style="display: flex; gap: 16px; align-items: center; color: var(--color-text);">
+          <button class="btn-icon" data-theme-toggle aria-label="Toggle theme" style="color: var(--color-text);"><span
+              class="theme-icon">🌙</span></button>
+          <button class="btn-icon" data-rtl-toggle aria-label="Toggle RTL" aria-pressed="false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M4 12h16" />
+              <path d="M8 8l-4 4 4 4" />
+              <path d="M16 8l4 4-4 4" />
+            </svg>
+          </button>
+          <button class="btn-icon" id="notification-btn" aria-label="Notifications"
+            style="position:relative; color: var(--color-text);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+              <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+            </svg>
+            <span
+              style="position:absolute; top:4px; right:4px; width:8px; height:8px; background:var(--color-primary); border-radius:50%;"></span>
+          </button>
+        </div>
+      </header>
+
+      <div style="padding: var(--space-xl);">
+        <div id="tab-home" class="dashboard-tab active" style="display:block;">
+          <div class="dashboard-header" style="margin-bottom: var(--space-xl);">
+            <h1 class="dashboard-title dashboard-greeting">Welcome back, Alex.</h1>
+            <p class="dashboard-subtitle" style="color: var(--color-text-muted);">Here's a look at your upcoming
+              sessions and creative progress.</p>
+          </div>
+
+
+
+          <div class="dashboard-grid">
+            <!-- Status Card -->
+            <div class="dashboard-card">
+              <div class="dashboard-card__header">
+                <h2 class="dashboard-card__title">Membership Status</h2>
+                <span class="status-badge status-badge--confirmed">Active</span>
+              </div>
+              <div class="dashboard-card__body">
+                <div style="font-family:var(--font-heading);font-size:1.75rem;margin-bottom:4px" id="dash-plan-name">—
+                </div>
+                <p style="color:var(--color-text-muted);margin-bottom:var(--space-md)" id="dash-sessions-used">—
+                  sessions used</p>
+                <div class="progress-bar">
+                  <div class="progress-bar__fill" style="width:0%"></div>
+                </div>
+                <a href="membership-usage.html" class="btn btn-sm btn-outline" style="margin-top:var(--space-sm)">View
+                  Usage Detail →</a>
+              </div>
+            </div>
+
+            <!-- Upcoming Booking -->
+            <div class="dashboard-card">
+              <div class="dashboard-card__header">
+                <h2 class="dashboard-card__title">Next Session</h2>
+              </div>
+              <div class="dashboard-card__body" style="display:flex;flex-direction:column;justify-content:center">
+                <div style="font-family:var(--font-heading);font-size:1.5rem;line-height:1.2;margin-bottom:8px"
+                  id="dash-upcoming-title">No upcoming sessions</div>
+                <div
+                  style="color:var(--color-text-muted);display:flex;align-items:center;gap:6px;margin-bottom:var(--space-md)">
+                  <span>📅</span> <span id="dash-upcoming-date">—</span>
+                </div>
+                <button class="btn btn-primary" id="open-booking-modal" style="width:max-content">Book a
+                  Session</button>
+              </div>
+            </div>
+
+            <!-- Reward Points -->
+            <div class="dashboard-card">
+              <div class="dashboard-card__header">
+                <h2 class="dashboard-card__title">Creative Points</h2>
+                <span class="status-badge status-badge--confirmed">Earned</span>
+              </div>
+              <div class="dashboard-card__body">
+                <div style="font-family:var(--font-heading);font-size:1.75rem;margin-bottom:4px">450</div>
+                <p style="color:var(--color-text-muted);margin-bottom:var(--space-md)">150 away from free session</p>
+                <a href="#" class="btn btn-sm btn-outline" style="margin-top:var(--space-sm)">Redeem Points →</a>
+              </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="dashboard-card">
+              <div class="dashboard-card__header">
+                <h2 class="dashboard-card__title">Recent Activity</h2>
+              </div>
+              <div class="dashboard-card__body">
+                <div style="margin-bottom:12px;">
+                  <p style="font-size:0.9rem; margin-bottom:2px; font-weight:600;">Watercolor Basics</p>
+                  <p style="font-size:0.75rem; color:var(--color-text-muted);">Attended on Sept 15, 2026</p>
+                </div>
+                <div>
+                  <p style="font-size:0.9rem; margin-bottom:2px; font-weight:600;">Membership Renewed</p>
+                  <p style="font-size:0.75rem; color:var(--color-text-muted);">Sept 1, 2026</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div id="tab-bookings" class="dashboard-tab" style="display:none;">
+          <div class="dashboard-header">
+            <h2 class="dashboard-title">My Bookings</h2>
+            <p class="dashboard-subtitle">Manage your upcoming creative sessions.</p>
+          </div>
+          <div class="dashboard-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--space-md);">
+            <div class="dashboard-card">
+              <div class="dashboard-card__header">
+                <h3 class="dashboard-card__title">Botanical Watercolors</h3>
+              </div>
+              <div class="dashboard-card__body">
+                <p style="margin-bottom: 8px; color: var(--color-text-muted);"><strong>Date:</strong> Oct 24, 2026
+                  &middot; 7:00 PM</p>
+                <p style="margin-bottom: 16px; color: var(--color-text-muted);"><strong>Status:</strong> <span
+                    style="color: #28a745; font-weight: 500;">Confirmed</span></p>
+                <div style="display: flex; gap: 8px;">
+                  <button class="btn btn-outline" style="flex:1; justify-content:center;">Reschedule</button>
+                  <button class="btn btn-outline"
+                    style="flex:1; justify-content:center; color: var(--color-danger); border-color: var(--color-danger);">Cancel</button>
+                </div>
+              </div>
+            </div>
+            <div class="dashboard-card">
+              <div class="dashboard-card__header">
+                <h3 class="dashboard-card__title">Sip & Paint Night</h3>
+              </div>
+              <div class="dashboard-card__body">
+                <p style="margin-bottom: 8px; color: var(--color-text-muted);"><strong>Date:</strong> Nov 02, 2026
+                  &middot; 6:30 PM</p>
+                <p style="margin-bottom: 16px; color: var(--color-text-muted);"><strong>Status:</strong> <span
+                    style="color: #28a745; font-weight: 500;">Confirmed</span></p>
+                <div style="display: flex; gap: 8px;">
+                  <button class="btn btn-outline" style="flex:1; justify-content:center;">Reschedule</button>
+                  <button class="btn btn-outline"
+                    style="flex:1; justify-content:center; color: var(--color-danger); border-color: var(--color-danger);">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-membership" class="dashboard-tab" style="display:none;">
+          <div class="dashboard-header">
+            <h2 class="dashboard-title">Membership & Usage</h2>
+            <p class="dashboard-subtitle">Track your session credits and member perks.</p>
+          </div>
+          <div class="dashboard-card" style="max-width: 600px;">
+            <div class="dashboard-card__body">
+              <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 16px;">Creative Explorer
+                Plan</h3>
+              <p style="color: var(--color-text-muted); margin-bottom: 24px;">Your current plan includes 4 studio
+                sessions per month.</p>
+
+              <div style="margin-bottom: 8px; display: flex; justify-content: space-between; font-weight: 500;">
+                <span>Credits Used</span>
+                <span>3 / 4</span>
+              </div>
+              <div
+                style="width: 100%; background: var(--color-border); height: 12px; border-radius: 6px; margin-bottom: 24px; overflow: hidden;">
+                <div style="width: 75%; background: var(--color-primary); height: 100%; border-radius: 6px;"></div>
+              </div>
+
+              <button class="btn btn-primary">Upgrade Plan</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-billing" class="dashboard-tab" style="display:none;">
+          <div class="dashboard-header">
+            <h2 class="dashboard-title">Billing & Plan</h2>
+            <p class="dashboard-subtitle">Manage your payment methods and view history.</p>
+          </div>
+          <div class="dashboard-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-md);">
+            <div class="dashboard-card">
+              <div class="dashboard-card__header">
+                <h3 class="dashboard-card__title">Payment Method</h3>
+              </div>
+              <div class="dashboard-card__body">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+                  <div
+                    style="width: 48px; height: 32px; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 12px;">
+                    VISA</div>
+                  <div>
+                    <p style="font-weight: 500;">Visa ending in 4242</p>
+                    <p style="font-size: 0.85rem; color: var(--color-text-muted);">Expires 12/28</p>
+                  </div>
+                </div>
+                <button class="btn btn-outline w-full" style="justify-content: center;">Update Payment Method</button>
+              </div>
+            </div>
+
+            <div class="dashboard-card">
+              <div class="dashboard-card__header">
+                <h3 class="dashboard-card__title">Recent Invoices</h3>
+              </div>
+              <div class="dashboard-card__body" style="padding: 0;">
+                <div
+                  style="padding: 16px; border-bottom: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
+                  <div>
+                    <p style="font-weight: 500;">Oct 1, 2026</p>
+                    <p style="font-size: 0.85rem; color: var(--color-text-muted);">Explorer Plan</p>
+                  </div>
+                  <div style="font-weight: 600;">.00</div>
+                </div>
+                <div style="padding: 16px; display: flex; justify-content: space-between; align-items: center;">
+                  <div>
+                    <p style="font-weight: 500;">Sep 1, 2026</p>
+                    <p style="font-size: 0.85rem; color: var(--color-text-muted);">Explorer Plan</p>
+                  </div>
+                  <div style="font-weight: 600;">.00</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-profile" class="dashboard-tab" style="display:none;">
+          <div class="dashboard-header">
+            <h2 class="dashboard-title">Settings & Profile</h2>
+            <p class="dashboard-subtitle">Update your personal information and preferences.</p>
+          </div>
+          <div class="dashboard-card" style="max-width: 600px;">
+            <div class="dashboard-card__body">
+              <form onsubmit="event.preventDefault();">
+                <div class="form-group">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" class="form-input" value="Jane Doe">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" class="form-input" value="jane@example.com">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Phone Number</label>
+                  <input type="tel" class="form-input" value="+1 (555) 123-4567">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Favorite Mediums</label>
+                  <select class="form-input">
+                    <option>Watercolors & Painting</option>
+                    <option>Pottery & Clay</option>
+                    <option>Sketching & Pencils</option>
+                    <option>Digital Art</option>
+                  </select>
+                </div>
+                <div style="margin-top: 32px; display: flex; gap: 12px;">
+                  <button type="submit" class="btn btn-primary">Save Changes</button>
+                  <button type="button" class="btn btn-outline">Cancel</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <script>
+          function switchTab(event, tabId) {
+            event.preventDefault();
+
+            // Hide all tabs
+            document.querySelectorAll('.dashboard-tab').forEach(tab => {
+              tab.style.display = 'none';
+            });
+
+            // Remove active class from all links
+            document.querySelectorAll('.sidebar__nav-link').forEach(link => {
+              link.classList.remove('active');
+            });
+
+            // Show target tab
+            document.getElementById('tab-' + tabId).style.display = 'block';
+
+            // Add active class to clicked link
+            event.currentTarget.classList.add('active');
+
+            // Close mobile sidebar if open
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            if (sidebar && sidebar.classList.contains('active')) {
+              sidebar.classList.remove('active');
+              if (overlay) overlay.classList.remove('active');
+            }
+          }
+        </script>
+      </div>
+    </main>
+  </div>
+
+  <!-- Booking Modal (shared) -->
+  <div class="modal-overlay" id="booking-modal" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title">
+    <div class="modal modal--wide">
+      <div class="modal__header">
+        <h2 class="modal__title" id="booking-modal-title">Book a Creative Night</h2><button class="modal__close"
+          onclick="ModalManager.close('booking-modal')" aria-label="Close">✕</button>
+      </div>
+      <div id="booking-form-content">
+        <div class="modal__body">
+          <p class="demo-note">⚠ Demo booking — no real reservations are made.</p>
+          <form id="booking-form" novalidate>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label" for="booking-name">Full Name
+                  <span>*</span></label><input type="text" id="booking-name" class="form-input" required
+                  value="Alex Morgan"></div>
+              <div class="form-group"><label class="form-label" for="booking-email">Email <span>*</span></label><input
+                  type="email" id="booking-email" class="form-input" required value="alex@example.com"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label" for="booking-phone">Phone</label><input type="tel"
+                  id="booking-phone" class="form-input"></div>
+              <div class="form-group"><label class="form-label" for="booking-seats">Seats <span>*</span></label><select
+                  id="booking-seats" class="form-select" required>
+                  <option value="">Select</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select></div>
+            </div><input type="hidden" id="booking-session" value="">
+            <div id="seat-selector" class="seat-selector"></div>
+          </form>
+        </div>
+        <div class="modal__footer"><button class="btn btn-outline" onclick="ModalManager.close('booking-modal')">Maybe
+            Later</button><button class="btn btn-primary"
+            onclick="document.getElementById('booking-form').dispatchEvent(new Event('submit',{cancelable:true,bubbles:true}))">Continue
+            →</button></div>
+      </div>
+      <div class="modal-success" id="booking-success" aria-live="polite">
+        <div class="modal-success__icon">✓</div>
+        <h3 class="modal-success__title">Booking Request Prepared</h3>
+        <p class="modal-success__desc">Your demo booking has been recorded.</p><button class="btn btn-primary"
+          onclick="ModalManager.close('booking-modal')">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script>AuthManager.requireLogin();</script>
+</body>
+
+</html>
+

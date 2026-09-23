@@ -1,0 +1,467 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Private Craft & Coloring Events | Color & Company</title>
+  <meta name="description"
+    content="Book a private creative night for your group — birthdays, corporate teams, friends and celebrations. Color & Company private events.">
+  <link rel="canonical" href="private-events.html">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+
+<body data-page="private-events">
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Color & Company Home">
+        <svg class="navbar__logo-mark" viewBox="0 0 42 42" fill="none" aria-hidden="true">
+          <circle cx="21" cy="21" r="20" stroke="#C96F61" stroke-width="1.5" fill="none" />
+          <path d="M12 28 Q14 16 21 13 Q28 10 30 21 Q32 30 21 32 Q14 34 12 28Z" stroke="var(--color-text)"
+            stroke-width="1.2" fill="none" />
+          <line x1="8" y1="21" x2="34" y2="21" stroke="#C96F61" stroke-width="0.8" stroke-dasharray="2 2" />
+        </svg>
+        <div class="navbar__logo-text">
+          <span class="navbar__logo-name">Color & Company</span>
+
+        </div>
+      </a>
+
+      <nav class="navbar__nav" aria-label="Site navigation">
+        <a href="index.html" class="navbar__link" data-nav-link>Home</a>
+        <a href="home-2.html" class="navbar__link" data-nav-link>Home 2</a>
+        <a href="about.html" class="navbar__link" data-nav-link>About</a>
+        <a href="sessions.html" class="navbar__link" data-nav-link>Sessions</a>
+        <a href="private-events.html" class="navbar__link" data-nav-link>Private Events</a>
+
+
+        <a href="contact.html" class="navbar__link" data-nav-link>Contact</a>
+        <a href="dashboard.html" class="navbar__link" data-nav-link>Dashboard</a>
+      </nav>
+
+      <div class="navbar__actions">
+
+        <button class="btn-icon" data-theme-toggle aria-label="Toggle theme" aria-pressed="false">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <button class="btn-icon" data-rtl-toggle aria-label="Toggle RTL" aria-pressed="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <path d="M4 12h16" />
+            <path d="M8 8l-4 4 4 4" />
+            <path d="M16 8l4 4-4 4" />
+          </svg>
+        </button>
+        <a href="login.html" class="btn btn-outline-light"
+          style="padding: 6px 12px; font-size: 14px; margin-left: var(--space-sm);">Login</a>
+
+      </div>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false"
+        aria-controls="mobile-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile Drawer -->
+  <aside class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <div class="mobile-drawer__close">
+      <button class="mobile-drawer__x" id="drawer-close" aria-label="Close navigation">✕</button>
+    </div>
+    <nav class="mobile-drawer__nav" aria-label="Mobile site navigation">
+      <a href="index.html" class="mobile-drawer__link" data-nav-link>Home</a>
+      <a href="home-2.html" class="mobile-drawer__link" data-nav-link>Home 2</a>
+      <a href="about.html" class="mobile-drawer__link" data-nav-link>About</a>
+      <a href="sessions.html" class="mobile-drawer__link" data-nav-link> Sessions</a>
+      <a href="private-events.html" class="mobile-drawer__link" data-nav-link>Private Events</a>
+
+
+      <a href="contact.html" class="mobile-drawer__link" data-nav-link>Contact</a><a href="dashboard.html"
+        class="mobile-drawer__link" data-nav-link>Dashboard</a>
+    </nav>
+    <div class="mobile-drawer__divider"></div>
+    <div class="mobile-drawer__controls">
+      <button class="btn-icon" data-theme-toggle aria-label="Toggle theme" aria-pressed="false">
+        <span class="theme-icon">🌙</span>
+      </button>
+      <button class="btn-icon" data-rtl-toggle aria-label="Toggle RTL" aria-pressed="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <path d="M4 12h16" />
+          <path d="M8 8l-4 4 4 4" />
+          <path d="M16 8l4 4-4 4" />
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-drawer__divider"></div>
+    <div class="mobile-drawer__cta">
+      <a href="login.html" class="btn btn-outline-light w-full" style="justify-content:center">Login</a>
+
+    </div>
+  </aside>
+
+  <!-- SECTION 01 — HERO -->
+  <header class="page-hero" role="banner"
+    style="background: linear-gradient(rgba(42,32,40,0.85), rgba(42,32,40,0.85)), url('assets/images/events-hero.jpg') center/cover no-repeat;">
+    <div class="page-hero__content">
+      <div class="page-hero__label">Private Events</div>
+      <h1 class="page-hero__title">Make the Night Yours.</h1>
+      <p class="page-hero__desc">Bring your team, friends or celebration group together for a private creative
+        experience — tailored to you.</p>
+      <a href="#private-enquiry" class="btn btn-primary" style="margin-top:var(--space-md)">Start an Enquiry →</a>
+    </div>
+  </header>
+
+  <!-- SECTION 02 — EVENT TYPES -->
+  <section class="section" aria-labelledby="event-types-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-header__label">Event Types</div>
+        <h2 class="section-header__title" id="event-types-title">Every Group, a Different Experience.</h2>
+      </div>
+
+      <div class="event-types-grid reveal" aria-label="Private event types">
+        <!-- Large card — Birthday -->
+        <div class="event-type-card">
+          <div class="event-type-card__image">
+            <img src="assets/images/event1.jpg" alt="Birthday creative evening celebration" loading="lazy" width="600"
+              height="800" onerror="this.style.display='none'">
+          </div>
+          <div class="event-type-card__content">
+            <div class="event-type-card__cat">Birthday Events</div>
+            <h3 class="event-type-card__title">Birthday Creative Nights</h3>
+            <p class="event-type-card__desc">Celebrate with something different. A private creative session for you and
+              your guests — memorable, personal and handmade.</p>
+          </div>
+        </div>
+
+        <!-- Small cards grid -->
+        <div class="event-type-card">
+          <div class="event-type-card">
+            <div class="event-type-card__image">
+              <img src="assets/images/event2.jpg" alt="Friends night out craft session" loading="lazy" width="600"
+                height="300">
+            </div>
+            <div class="event-type-card__content">
+              <div class="event-type-card__cat">Corporate</div>
+              <h3 class="event-type-card__title">Corporate Creative Sessions</h3>
+              <p class="event-type-card__desc">Team-building through shared creativity. Genuine connection, no forced
+                fun.</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="event-type-card">
+          <div class="event-type-card__image">
+            <img src="assets/images/event3.jpg" style="width:100%; height:100%; object-fit:cover;"
+              alt="Friends night out craft session" loading="lazy" width="600" height="300">
+          </div>
+          <div class="event-type-card__content">
+            <div class="event-type-card__cat">Friends & Groups</div>
+            <h3 class="event-type-card__title">Friends' Night Out & Community Groups</h3>
+            <p class="event-type-card__desc">The perfect alternative night out — creative, social and something you'll
+              actually remember.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Additional event types -->
+      <div class="benefits-grid reveal" style="margin-top:var(--space-lg); grid-template-columns: repeat(3, 1fr);">
+        <div class="benefit-item">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            style="color:var(--color-primary);">
+            <path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"></path>
+            <path d="M4 16h16"></path>
+            <path d="M4 12h16"></path>
+            <rect x="2" y="21" width="20" height="2"></rect>
+            <path d="M12 11V7"></path>
+            <path d="M12 7c1.5 0 2-2 2-2s-1.5-1-2-1-2 1-2 1 1.5 2 2 2z"></path>
+          </svg>
+          <div class="benefit-item__title">Birthday Groups</div>
+          <p class="benefit-item__desc">A private creative session where the birthday person chooses the theme and the
+            whole group makes something together.</p>
+        </div>
+        <div class="benefit-item">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            style="color:var(--color-primary);">
+            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+            <path d="M9 22v-4h6v4"></path>
+            <path d="M8 6h.01"></path>
+            <path d="M16 6h.01"></path>
+            <path d="M12 6h.01"></path>
+            <path d="M12 10h.01"></path>
+            <path d="M12 14h.01"></path>
+            <path d="M16 10h.01"></path>
+            <path d="M16 14h.01"></path>
+            <path d="M8 10h.01"></path>
+            <path d="M8 14h.01"></path>
+          </svg>
+          <div class="benefit-item__title">Corporate Teams</div>
+          <p class="benefit-item__desc">Take your team away from screens and into something genuinely creative. Full
+            studio hire available.</p>
+        </div>
+        <div class="benefit-item">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            style="color:var(--color-primary);">
+            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+            <path d="M12 8v8"></path>
+            <path d="M8 12h8"></path>
+          </svg>
+          <div class="benefit-item__title">Special Celebrations</div>
+          <p class="benefit-item__desc">Engagements, promotions, hen parties, reunions — any occasion worth celebrating
+            with something made by hand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 03 — HOW IT WORKS -->
+  <section class="section" style="background:var(--color-surface)" aria-labelledby="how-private-title">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <div class="section-header__label">The Process</div>
+        <h2 class="section-header__title" id="how-private-title">How Private Events Work</h2>
+      </div>
+      <div class="timeline" role="list" aria-label="Private event process steps">
+        <div class="timeline__step reveal" role="listitem">
+          <div class="timeline__num" aria-hidden="true">01</div>
+          <div class="timeline__title">Tell Us About Your Group</div>
+          <p class="timeline__desc">Share your group size, occasion, and any ideas. We'll take it from there.</p>
+        </div>
+        <div class="timeline__step reveal" data-delay="100" role="listitem">
+          <div class="timeline__num" aria-hidden="true">02</div>
+          <div class="timeline__title">Choose Your Theme</div>
+          <p class="timeline__desc">Pick from our existing session themes or work with us to create something bespoke
+            for your occasion.</p>
+        </div>
+        <div class="timeline__step reveal" data-delay="200" role="listitem">
+          <div class="timeline__num" aria-hidden="true">03</div>
+          <div class="timeline__title">Customise the Experience</div>
+          <p class="timeline__desc">Select your materials, activity level, timing and any extras to make the evening
+            yours.</p>
+        </div>
+        <div class="timeline__step reveal" data-delay="300" role="listitem">
+          <div class="timeline__num" aria-hidden="true">04</div>
+          <div class="timeline__title">Create Together</div>
+          <p class="timeline__desc">Your private session — just your group, your theme, and our studio space to
+            yourselves.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 04 — ENQUIRY FORM -->
+  <section class="section" id="private-enquiry" aria-labelledby="enquiry-title">
+    <div class="container">
+      <div style="max-width:760px;margin-inline:auto">
+        <div class="section-header reveal section-header--center">
+          <div class="section-header__label">Start an Enquiry</div>
+          <h2 class="section-header__title" id="enquiry-title">Tell Us About Your Event.</h2>
+
+        </div>
+
+        <div id="private-event-form-content">
+          <form id="private-event-form" class="reveal" style="display:flex;flex-direction:column;gap:var(--space-md)"
+            novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="pe-type">Event Type <span>*</span></label>
+                <select id="pe-type" class="form-select" required>
+                  <option value="">Select event type</option>
+                  <option>Birthday Creative Night</option>
+                  <option>Corporate Session</option>
+                  <option>Friends' Night Out</option>
+                  <option>Community Group</option>
+                  <option>Special Celebration</option>
+                  <option>Other</option>
+                </select>
+                <span class="form-error" id="pe-type-error">Please select an event type.</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="pe-guests">Number of Guests <span>*</span></label>
+                <select id="pe-guests" class="form-select" required>
+                  <option value="">Select group size</option>
+                  <option>Up to 8 guests</option>
+                  <option>9–15 guests</option>
+                  <option>16–25 guests</option>
+                  <option>26–40 guests</option>
+                  <option>40+ guests</option>
+                </select>
+                <span class="form-error" id="pe-guests-error">Please select guest count.</span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="pe-date">Preferred Date <span>*</span></label>
+                <input type="date" id="pe-date" class="form-input" required>
+                <span class="form-error" id="pe-date-error">Please select a preferred date.</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="pe-time">Preferred Time</label>
+                <select id="pe-time" class="form-select">
+                  <option value="">Flexible</option>
+                  <option>Afternoon (2pm–5pm)</option>
+                  <option>Early Evening (5pm–7pm)</option>
+                  <option>Evening (7pm–10pm)</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="pe-theme">Preferred Theme</label>
+              <select id="pe-theme" class="form-select">
+                <option value="">Open to suggestions</option>
+                <option>Botanical Coloring</option>
+                <option>Abstract Art</option>
+                <option>Mandala Night</option>
+                <option>Seasonal / Autumn</option>
+                <option>Collage & Mixed Media</option>
+                <option>Something custom</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="pe-name">Your Name <span>*</span></label>
+                <input type="text" id="pe-name" class="form-input" required autocomplete="name">
+                <span class="form-error" id="pe-name-error">Please enter your name.</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="pe-email">Email <span>*</span></label>
+                <input type="email" id="pe-email" class="form-input" required autocomplete="email">
+                <span class="form-error" id="pe-email-error">Please enter a valid email.</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="pe-phone">Phone</label>
+              <input type="tel" id="pe-phone" class="form-input" autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="pe-message">Tell Us More</label>
+              <textarea id="pe-message" class="form-textarea" rows="4"
+                placeholder="Share any details about your event, ideas, or questions…"></textarea>
+            </div>
+            <div style="text-align: center;">
+              <button type="submit" class="btn btn-primary btn-lg">Prepare Event Enquiry →</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-success" id="private-event-success" aria-live="polite">
+          <div class="modal-success__icon" aria-hidden="true">✓</div>
+          <h3 class="modal-success__title">Event Enquiry Prepared.</h3>
+          <p class="modal-success__desc">Your demo enquiry has been recorded. In a real implementation, we'd be in touch
+            within 24 hours. This is a frontend demonstration only.</p>
+          <a href="sessions.html" class="btn btn-primary">Browse Sessions →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 05 — FINAL CTA -->
+  <section class="cta-dark" aria-labelledby="pe-cta-title">
+    <div class="container" style="text-align:center">
+      <h2 class="cta-section__title" id="pe-cta-title" style="color:var(--color-cream)">Got a Group? Let's Make
+        Something.</h2>
+      <p style="color:rgba(244,238,229,0.6);font-size:var(--text-md);margin-bottom:var(--space-lg)">Private events for
+        any occasion, any size, any theme.</p>
+      <a href="#private-enquiry" class="btn btn-primary btn-lg">Start a Private Event Enquiry →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="index.html" class="navbar__logo" aria-label="Color &amp; Company Home"
+            style="text-decoration: none; display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+            <svg class="navbar__logo-mark" viewBox="0 0 42 42" fill="none" aria-hidden="true">
+              <circle cx="21" cy="21" r="20" stroke="#C96F61" stroke-width="1.5" fill="none" />
+              <path d="M12 28 Q14 16 21 13 Q28 10 30 21 Q32 30 21 32 Q14 34 12 28Z" stroke="var(--color-text)"
+                stroke-width="1.2" fill="none" />
+              <line x1="8" y1="21" x2="34" y2="21" stroke="#C96F61" stroke-width="0.8" stroke-dasharray="2 2" />
+            </svg>
+            <div class="navbar__logo-text" style="display: flex; flex-direction: column;">
+              <span class="navbar__logo-name">Color &amp;
+                Company</span>
+            </div>
+          </a>
+          <p class="footer__brand-tagline">Make something. Meet someone. Have a night. A premium creative experience for
+            adults.</p>
+          <div class="footer__social" style="display: flex; gap: 12px; margin-top: 16px;">
+            <a href="#" onmouseover="this.style.color='#C96F61'" onmouseout="this.style.color=''"
+              style="color: var(--color-text); transition: color 0.3s;"><svg width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg></a>
+            <a href="#" onmouseover="this.style.color='#C96F61'" onmouseout="this.style.color=''"
+              style="color: var(--color-text); transition: color 0.3s;"><svg width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg></a>
+            <a href="#" onmouseover="this.style.color='#C96F61'" onmouseout="this.style.color=''"
+              style="color: var(--color-text); transition: color 0.3s;"><svg width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">Explore</div>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="home-2.html" class="footer__link">Home 2</a></li>
+            <li><a href="sessions.html" class="footer__link">Sessions</a></li>
+            <li><a href="private-events.html" class="footer__link">Private Events</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Support</div>
+          <ul class="footer__links">
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+            <li><a href="about.html" class="footer__link">About</a></li>
+            <li><a href="coming-soon.html" class="footer__link">Accessibility</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Creative Nights, New Themes & Club News</div>
+          <p class="footer__newsletter-desc">Stay in the loop with upcoming sessions and member news.</p>
+          <form class="footer__newsletter-form" aria-label="Newsletter signup"
+            onsubmit="event.preventDefault();showToast('Subscribed! Demo only — no email recorded.')">
+            <input type="email" class="footer__newsletter-input" placeholder="Email Address"
+              aria-label="Your email address">
+            <button type="submit" class="footer__newsletter-btn">Subscribe →</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 Color & Company. All rights reserved. <em>Fictional demonstration
+            business.</em></p>
+
+      </div>
+    </div>
+  </footer>
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24"
+      fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+      <path d="m18 15-6-6-6 6" />
+    </svg></button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

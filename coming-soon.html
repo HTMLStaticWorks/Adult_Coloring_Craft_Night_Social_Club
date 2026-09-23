@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon | Color & Company</title>
+  <meta name="description" content="This feature is coming soon to Color & Company.">
+  <link rel="canonical" href="coming-soon.html">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body data-page="coming-soon" style="background:var(--color-surface);min-height:100vh;display:flex;flex-direction:column">
+
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__logo" aria-label="Color & Company Home"><svg class="navbar__logo-mark" viewBox="0 0 42 42" fill="none" aria-hidden="true"><circle cx="21" cy="21" r="20" stroke="#C96F61" stroke-width="1.5" fill="none"/><path d="M12 28 Q14 16 21 13 Q28 10 30 21 Q32 30 21 32 Q14 34 12 28Z" stroke="#F4EEE5" stroke-width="1.2" fill="none"/></svg><div class="navbar__logo-text"><span class="navbar__logo-name">Color & Company</span></div></a>
+    <nav class="navbar__nav"><a href="index.html" class="navbar__link" data-nav-link>Home</a><a href="home-2.html" class="navbar__link" data-nav-link>Home 2</a><a href="sessions.html" class="navbar__link" data-nav-link>Sessions</a><a href="private-events.html" class="navbar__link" data-nav-link>Private Events</a><a href="about.html" class="navbar__link" data-nav-link>About</a><a href="contact.html" class="navbar__link" data-nav-link>Contact</a></nav>
+    <div class="navbar__actions"><button class="btn-icon" data-search-open aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button><button class="btn-icon" data-theme-toggle aria-label="Toggle theme"><span class="theme-icon">🌙</span></button><button class="btn-icon" data-rtl-toggle aria-label="Toggle RTL"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 12H3m0 0 3-3m-3 3 3 3M21 6H9"/></svg></button><a href="login.html" class="btn btn-outline-light" style="padding: 6px 12px; font-size: 14px;">Login</a></div>
+    <button class="navbar__hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+<aside class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile navigation"><div class="mobile-drawer__close"><span class="mobile-drawer__logo">Color & Company</span><button class="mobile-drawer__x" id="drawer-close" aria-label="Close">✕</button></div><nav class="mobile-drawer__nav"><a href="index.html" class="mobile-drawer__link" data-nav-link>Home</a><a href="sessions.html" class="mobile-drawer__link" data-nav-link>Sessions</a><a href="contact.html" class="mobile-drawer__link" data-nav-link>Contact</a></nav><div class="mobile-drawer__divider"></div><div class="mobile-drawer__controls"><div class="mobile-drawer__control" data-theme-toggle><span>Appearance</span><span class="theme-icon">🌙</span></div><div class="mobile-drawer__control" data-rtl-toggle><span class="rtl-label">Switch to RTL</span></div></div></aside>
+<div class="search-panel" id="search-panel" role="search"><div class="search-panel__inner" style="flex-direction:column;gap:12px"><div style="display:flex;align-items:center;gap:12px"><input type="search" id="search-input" class="search-panel__input" placeholder="Search…" aria-label="Search"><button id="search-close" class="btn-icon" aria-label="Close">✕</button></div><div class="search-panel__results" id="search-results" aria-live="polite"></div></div></div>
+
+
+<main style="flex:1;display:flex;align-items:center;justify-content:center;padding:var(--space-xl) var(--space-sm)">
+  <div style="background:var(--color-bg);padding:var(--space-xl);border-radius:12px;border:1px solid var(--color-border);max-width:600px;width:100%;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,0.05)">
+    <div style="font-size:3rem;margin-bottom:var(--space-sm)">⏳</div>
+    <h1 style="font-family:var(--font-heading);font-size:2.5rem;color:var(--color-text);margin-bottom:12px">Coming Soon.</h1>
+    <p style="color:var(--color-text-muted);margin-bottom:var(--space-lg)">We're still working on this part of the studio. Check back soon for updates.</p>
+    
+    <div id="countdown-target" data-date="2027-01-01T00:00:00" style="display:flex;gap:var(--space-md);justify-content:center;margin-bottom:var(--space-xl)">
+      <div style="background:var(--color-surface);padding:var(--space-sm) var(--space-md);border-radius:8px">
+        <div style="font-family:var(--font-heading);font-size:2rem" id="cd-days">00</div>
+        <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted)">Days</div>
+      </div>
+      <div style="background:var(--color-surface);padding:var(--space-sm) var(--space-md);border-radius:8px">
+        <div style="font-family:var(--font-heading);font-size:2rem" id="cd-hours">00</div>
+        <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted)">Hours</div>
+      </div>
+      <div style="background:var(--color-surface);padding:var(--space-sm) var(--space-md);border-radius:8px">
+        <div style="font-family:var(--font-heading);font-size:2rem" id="cd-mins">00</div>
+        <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted)">Mins</div>
+      </div>
+      <div style="background:var(--color-surface);padding:var(--space-sm) var(--space-md);border-radius:8px">
+        <div style="font-family:var(--font-heading);font-size:2rem" id="cd-secs">00</div>
+        <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted)">Secs</div>
+      </div>
+    </div>
+
+    <a href="index.html" class="btn btn-outline" style="justify-content:center">← Return to Home</a>
+  </div>
+</main>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Color & Company</title>
+  <meta name="description"
+    content="Learn about Color & Company, our studio, our story and our approach to adult creative nights.">
+  <link rel="canonical" href="about.html">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+
+<body data-page="about">
+
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Color & Company Home">
+        <svg class="navbar__logo-mark" viewBox="0 0 42 42" fill="none" aria-hidden="true">
+          <circle cx="21" cy="21" r="20" stroke="#C96F61" stroke-width="1.5" fill="none" />
+          <path d="M12 28 Q14 16 21 13 Q28 10 30 21 Q32 30 21 32 Q14 34 12 28Z" stroke="var(--color-text)"
+            stroke-width="1.2" fill="none" />
+          <line x1="8" y1="21" x2="34" y2="21" stroke="#C96F61" stroke-width="0.8" stroke-dasharray="2 2" />
+        </svg>
+        <div class="navbar__logo-text">
+          <span class="navbar__logo-name">Color & Company</span>
+
+        </div>
+      </a>
+
+      <nav class="navbar__nav" aria-label="Site navigation">
+        <a href="index.html" class="navbar__link" data-nav-link>Home</a>
+        <a href="home-2.html" class="navbar__link" data-nav-link>Home 2</a>
+        <a href="about.html" class="navbar__link" data-nav-link>About</a>
+        <a href="sessions.html" class="navbar__link" data-nav-link>Sessions</a>
+        <a href="private-events.html" class="navbar__link" data-nav-link>Private Events</a>
+
+
+        <a href="contact.html" class="navbar__link" data-nav-link>Contact</a>
+        <a href="dashboard.html" class="navbar__link" data-nav-link>Dashboard</a>
+      </nav>
+
+      <div class="navbar__actions">
+
+        <button class="btn-icon" data-theme-toggle aria-label="Toggle theme" aria-pressed="false">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <button class="btn-icon" data-rtl-toggle aria-label="Toggle RTL" aria-pressed="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <path d="M4 12h16" />
+            <path d="M8 8l-4 4 4 4" />
+            <path d="M16 8l4 4-4 4" />
+          </svg>
+        </button>
+        <a href="login.html" class="btn btn-outline-light"
+          style="padding: 6px 12px; font-size: 14px; margin-left: var(--space-sm);">Login</a>
+
+      </div>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false"
+        aria-controls="mobile-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile Drawer -->
+  <aside class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <div class="mobile-drawer__close">
+      <button class="mobile-drawer__x" id="drawer-close" aria-label="Close navigation">✕</button>
+    </div>
+    <nav class="mobile-drawer__nav" aria-label="Mobile site navigation">
+      <a href="index.html" class="mobile-drawer__link" data-nav-link>Home</a>
+      <a href="home-2.html" class="mobile-drawer__link" data-nav-link>Home 2</a>
+      <a href="about.html" class="mobile-drawer__link" data-nav-link>About</a>
+      <a href="sessions.html" class="mobile-drawer__link" data-nav-link> Sessions</a>
+      <a href="private-events.html" class="mobile-drawer__link" data-nav-link>Private Events</a>
+
+
+      <a href="contact.html" class="mobile-drawer__link" data-nav-link>Contact</a><a href="dashboard.html"
+        class="mobile-drawer__link" data-nav-link>Dashboard</a>
+    </nav>
+    <div class="mobile-drawer__divider"></div>
+    <div class="mobile-drawer__controls">
+      <button class="btn-icon" data-theme-toggle aria-label="Toggle theme" aria-pressed="false">
+        <span class="theme-icon">🌙</span>
+      </button>
+      <button class="btn-icon" data-rtl-toggle aria-label="Toggle RTL" aria-pressed="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <path d="M4 12h16" />
+          <path d="M8 8l-4 4 4 4" />
+          <path d="M16 8l4 4-4 4" />
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-drawer__divider"></div>
+    <div class="mobile-drawer__cta">
+      <a href="login.html" class="btn btn-outline-light w-full" style="justify-content:center">Login</a>
+
+    </div>
+  </aside>
+
+  <header class="page-hero" role="banner"
+    style="background: linear-gradient(rgba(42,32,40,0.85), rgba(42,32,40,0.85)), url('assets/images/abt-hero.jpg') center/cover no-repeat;">
+    <div class="page-hero__content">
+      <div class="page-hero__label">Our Story</div>
+      <h1 class="page-hero__title">We Believe in Making Things.</h1>
+      <p class="page-hero__desc">Adults deserve a space to be creative, social, and offline. Welcome to Color & Company.
+      </p>
+    </div>
+  </header>
+
+  <section class="split-section" aria-labelledby="about-1">
+    <div class="split-section__image reveal-left">
+      <img src="assets/images/studio.jpg" alt="Studio space" loading="lazy">
+    </div>
+    <div class="split-section__content reveal-right">
+      <h2 class="section-header__title" id="about-1">Why We Started.</h2>
+      <p style="color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md)">
+        Going out used to mean loud bars, expensive dinners, or sitting in a dark theater. We wanted something different
+        — an evening where you could talk, relax, and actually make something with your hands.
+      </p>
+      <p style="color:var(--color-text-muted);line-height:1.8">
+        Color & Company was built on a simple idea: creativity shouldn't stop when you grow up, and socialising
+        shouldn't always involve a screen or a shout.
+      </p>
+    </div>
+  </section>
+
+  <!-- NEW SECTION 1: Philosophy -->
+  <section class="section" aria-labelledby="about-2">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <div class="section-header__label">Philosophy</div>
+        <h2 class="section-header__title" id="about-2">It's about the process, not perfection.</h2>
+        <p class="section-header__desc">You don't need to be an artist to join. You just need a desire to make something
+          and disconnect from the noise.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION 2: Studio Space -->
+  <section class="split-section" aria-labelledby="about-3" style="flex-direction: row-reverse;">
+    <div class="split-section__image reveal-right">
+      <img src="assets/images/focus.jpg" alt="Studio environment" loading="lazy">
+    </div>
+    <div class="split-section__content reveal-left">
+      <h2 class="section-header__title" id="about-3">A Space Designed for Focus.</h2>
+      <p style="color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md)">
+        Every detail of Color & Company has been considered to help you drop into a flow state. Ambient lighting,
+        comfortable seating, and premium tools provided at every table.
+      </p>
+    </div>
+  </section>
+
+  <!-- NEW SECTION 3: Values -->
+  <section class="section"
+    style="background:var(--color-surface); padding-top: 100px !important; padding-bottom: 140px !important;">
+    <div class="container">
+      <div class="section-header reveal section-header--center">
+        <h2 class="section-header__title">Our Core Values</h2>
+      </div>
+      <div class="benefits-grid reveal core-values-grid">
+        <div class="benefit-item">
+          <div class="benefit-item__title">Inclusivity</div>
+          <p class="benefit-item__desc">Everyone starts somewhere. We welcome absolute beginners and seasoned creators
+            alike.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-item__title">Analog Connection</div>
+          <p class="benefit-item__desc">A strict no-laptops policy during sessions ensures everyone is present in the
+            room.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-item__title">Quality Materials</div>
+          <p class="benefit-item__desc">We source only the best paper, pencils, and craft materials so your work feels
+            premium.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section"
+    style="background: linear-gradient(rgba(42,32,40,0.85), rgba(42,32,40,0.85)), url('assets/images/hero-craft-night.webp') center/cover no-repeat; color: white;">
+    <div class="container" style="text-align:center">
+      <div class="section-header__label" style="justify-content:center;display:flex">Join Us</div>
+      <h2 class="section-header__title" style="margin-bottom:var(--space-md); color: white;">Experience the Studio.
+      </h2>
+      <a href="sessions.html" class="btn btn-primary">Book a Session →</a>
+    </div>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="index.html" class="navbar__logo" aria-label="Color &amp; Company Home"
+            style="text-decoration: none; display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+            <svg class="navbar__logo-mark" viewBox="0 0 42 42" fill="none" aria-hidden="true">
+              <circle cx="21" cy="21" r="20" stroke="#C96F61" stroke-width="1.5" fill="none" />
+              <path d="M12 28 Q14 16 21 13 Q28 10 30 21 Q32 30 21 32 Q14 34 12 28Z" stroke="var(--color-text)"
+                stroke-width="1.2" fill="none" />
+              <line x1="8" y1="21" x2="34" y2="21" stroke="#C96F61" stroke-width="0.8" stroke-dasharray="2 2" />
+            </svg>
+            <div class="navbar__logo-text" style="display: flex; flex-direction: column;">
+              <span class="navbar__logo-name">Color &amp;
+                Company</span>
+            </div>
+          </a>
+          <p class="footer__brand-tagline">Make something. Meet someone. Have a night. A premium creative experience for
+            adults.</p>
+          <div class="footer__social" style="display: flex; gap: 12px; margin-top: 16px;">
+            <a href="#" onmouseover="this.style.color='#C96F61'" onmouseout="this.style.color=''"
+              style="color: var(--color-text); transition: color 0.3s;"><svg width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg></a>
+            <a href="#" onmouseover="this.style.color='#C96F61'" onmouseout="this.style.color=''"
+              style="color: var(--color-text); transition: color 0.3s;"><svg width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg></a>
+            <a href="#" onmouseover="this.style.color='#C96F61'" onmouseout="this.style.color=''"
+              style="color: var(--color-text); transition: color 0.3s;"><svg width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">Explore</div>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="home-2.html" class="footer__link">Home 2</a></li>
+            <li><a href="sessions.html" class="footer__link">Sessions</a></li>
+            <li><a href="private-events.html" class="footer__link">Private Events</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Support</div>
+          <ul class="footer__links">
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+            <li><a href="about.html" class="footer__link">About</a></li>
+            <li><a href="coming-soon.html" class="footer__link">Accessibility</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Creative Nights, New Themes & Club News</div>
+          <p class="footer__newsletter-desc">Stay in the loop with upcoming sessions and member news.</p>
+          <form class="footer__newsletter-form" aria-label="Newsletter signup"
+            onsubmit="event.preventDefault();showToast('Subscribed! Demo only — no email recorded.')">
+            <input type="email" class="footer__newsletter-input" placeholder="Email Address"
+              aria-label="Your email address">
+            <button type="submit" class="footer__newsletter-btn">Subscribe →</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 Color & Company. All rights reserved. <em>Fictional demonstration
+            business.</em></p>
+
+      </div>
+    </div>
+  </footer>
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24"
+      fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+      <path d="m18 15-6-6-6 6" />
+    </svg></button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

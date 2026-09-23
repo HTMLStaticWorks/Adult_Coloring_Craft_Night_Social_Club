@@ -1,0 +1,602 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color & Company | Creative Social Club</title>
+  <meta name="description"
+    content="Color & Company — an experimental, interactive creative social club experience. Explore the tabletop, choose your night, and find your membership.">
+  <meta property="og:title" content="Color & Company | Creative Social Club">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="home-2.html">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+
+<body data-page="home-2">
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Color & Company Home">
+        <svg class="navbar__logo-mark" viewBox="0 0 42 42" fill="none" aria-hidden="true">
+          <circle cx="21" cy="21" r="20" stroke="#C96F61" stroke-width="1.5" fill="none" />
+          <path d="M12 28 Q14 16 21 13 Q28 10 30 21 Q32 30 21 32 Q14 34 12 28Z" stroke="var(--color-text)"
+            stroke-width="1.2" fill="none" />
+          <line x1="8" y1="21" x2="34" y2="21" stroke="#C96F61" stroke-width="0.8" stroke-dasharray="2 2" />
+        </svg>
+        <div class="navbar__logo-text">
+          <span class="navbar__logo-name">Color & Company</span>
+
+        </div>
+      </a>
+
+      <nav class="navbar__nav" aria-label="Site navigation">
+        <a href="index.html" class="navbar__link" data-nav-link>Home</a>
+        <a href="home-2.html" class="navbar__link" data-nav-link>Home 2</a>
+        <a href="about.html" class="navbar__link" data-nav-link>About</a>
+        <a href="sessions.html" class="navbar__link" data-nav-link>Sessions</a>
+        <a href="private-events.html" class="navbar__link" data-nav-link>Private Events</a>
+
+
+        <a href="contact.html" class="navbar__link" data-nav-link>Contact</a>
+        <a href="dashboard.html" class="navbar__link" data-nav-link>Dashboard</a>
+      </nav>
+
+      <div class="navbar__actions">
+
+        <button class="btn-icon" data-theme-toggle aria-label="Toggle theme" aria-pressed="false">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <button class="btn-icon" data-rtl-toggle aria-label="Toggle RTL" aria-pressed="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <path d="M4 12h16" />
+            <path d="M8 8l-4 4 4 4" />
+            <path d="M16 8l4 4-4 4" />
+          </svg>
+        </button>
+        <a href="login.html" class="btn btn-outline-light"
+          style="padding: 6px 12px; font-size: 14px; margin-left: var(--space-sm);">Login</a>
+
+      </div>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false"
+        aria-controls="mobile-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile Drawer -->
+  <aside class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <div class="mobile-drawer__close">
+      <button class="mobile-drawer__x" id="drawer-close" aria-label="Close navigation">✕</button>
+    </div>
+    <nav class="mobile-drawer__nav" aria-label="Mobile site navigation">
+      <a href="index.html" class="mobile-drawer__link" data-nav-link>Home</a>
+      <a href="home-2.html" class="mobile-drawer__link" data-nav-link>Home 2</a>
+      <a href="about.html" class="mobile-drawer__link" data-nav-link>About</a>
+      <a href="sessions.html" class="mobile-drawer__link" data-nav-link> Sessions</a>
+      <a href="private-events.html" class="mobile-drawer__link" data-nav-link>Private Events</a>
+
+
+      <a href="contact.html" class="mobile-drawer__link" data-nav-link>Contact</a><a href="dashboard.html"
+        class="mobile-drawer__link" data-nav-link>Dashboard</a>
+    </nav>
+    <div class="mobile-drawer__divider"></div>
+    <div class="mobile-drawer__controls">
+      <button class="btn-icon" data-theme-toggle aria-label="Toggle theme" aria-pressed="false">
+        <span class="theme-icon">🌙</span>
+      </button>
+      <button class="btn-icon" data-rtl-toggle aria-label="Toggle RTL" aria-pressed="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <path d="M4 12h16" />
+          <path d="M8 8l-4 4 4 4" />
+          <path d="M16 8l4 4-4 4" />
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-drawer__divider"></div>
+    <div class="mobile-drawer__cta">
+      <a href="login.html" class="btn btn-outline-light w-full" style="justify-content:center">Login</a>
+
+    </div>
+  </aside>
+
+  <!-- ===================== HERO — SPLIT ===================== -->
+  <section class="hero-split" aria-label="Hero">
+    <div class="hero-split__left">
+      <div class="hero-split__decorative" aria-hidden="true">
+        <span class="hero-split__tag">Create</span>
+        <span class="hero-split__tag">Social</span>
+        <span class="hero-split__tag">Evening</span>
+      </div>
+      <h1 class="hero-split__title">Color Outside<br><em>the Lines.</em></h1>
+      <p class="hero-split__subtitle">A grown-up space for making things, meeting people and enjoying a slower kind of
+        night out.</p>
+      <div class="hero__actions">
+        <a href="sessions.html" class="btn btn-primary">Explore the Club →</a>
+        <a href="membership.html" class="btn btn-outline-light">Join the Club</a>
+      </div>
+    </div>
+    <div class="hero-split__right">
+      <img src="assets/images/home2-hero.jpg" alt="A creative craft table with art supplies laid out beautifully"
+        width="800" height="1000" loading="eager" fetchpriority="high">
+    </div>
+  </section>
+
+  <!-- ===================== SECTION 02 — INTERACTIVE TABLETOP ===================== -->
+  <section class="section" style="background:var(--color-surface)" aria-labelledby="tabletop-title">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <div class="section-header__label">The Creative Table</div>
+        <h2 class="section-header__title" id="tabletop-title">Everything on the Table.</h2>
+        <p class="section-header__desc">Hover over the items to discover what we use in our sessions. Each tool tells a
+          story.</p>
+      </div>
+      <div class="tabletop reveal" aria-label="Interactive creative table">
+        <img src="assets/images/table.jpg" alt="Creative studio table with art supplies" width="1280" height="720"
+          loading="lazy">
+        <!-- Hotspots added by JS -->
+      </div>
+      <p class="demo-note" style="margin-top:var(--space-sm);display:block">⚠ Interactive tabletop — demo display only.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== SECTION 03 — NIGHT SELECTOR ===================== -->
+  <section class="section" aria-labelledby="choose-title">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <div class="section-header__label">Choose Your Night</div>
+        <h2 class="section-header__title" id="choose-title">Find your kind of evening.</h2>
+        <p class="section-header__desc">From quiet solo creation to lively social sessions — choose the experience that
+          fits your mood.</p>
+      </div>
+
+      <div class="night-selector reveal" role="tablist" aria-label="Session type selector">
+        <div class="night-selector__tabs">
+          <button class="night-selector__tab active" role="tab" aria-selected="true" data-night="coloring"
+            aria-controls="panel-coloring">
+            <span class="tab-dot"></span> Coloring Night
+          </button>
+          <button class="night-selector__tab" role="tab" aria-selected="false" data-night="craft"
+            aria-controls="panel-craft">
+            <span class="tab-dot"></span> Craft Night
+          </button>
+          <button class="night-selector__tab" role="tab" aria-selected="false" data-night="quiet"
+            aria-controls="panel-quiet">
+            <span class="tab-dot"></span> Quiet Creative
+          </button>
+          <button class="night-selector__tab" role="tab" aria-selected="false" data-night="social"
+            aria-controls="panel-social">
+            <span class="tab-dot"></span> Social Session
+          </button>
+          <button class="night-selector__tab" role="tab" aria-selected="false" data-night="seasonal"
+            aria-controls="panel-seasonal">
+            <span class="tab-dot"></span> Seasonal Special
+          </button>
+        </div>
+
+        <div class="night-selector__panel active" id="panel-coloring" role="tabpanel" aria-label="Coloring Night">
+          <div class="night-selector__panel-image"><img src="assets/images/choose1.jpg" alt="Botanical coloring session"
+              loading="lazy" onerror="this.src='assets/images/coloring-table.webp'">
+          </div>
+          <div class="night-selector__panel-content">
+            <div class="night-selector__panel-cat">Coloring Night</div>
+            <h3 class="night-selector__panel-title">An evening of color, line and quiet focus.</h3>
+            <p class="night-selector__panel-desc">Work through detailed coloring sheets using premium pencils and
+              markers. Botanical patterns, geometric designs, abstract compositions — choose your style and lose
+              yourself in the process.</p>
+            <a href="sessions.html" class="btn btn-primary btn-sm" style="margin-top:var(--space-sm)">See Coloring
+              Sessions →</a>
+          </div>
+        </div>
+
+        <div class="night-selector__panel" id="panel-craft" role="tabpanel" aria-label="Craft Night">
+          <div class="night-selector__panel-image"><img src="assets/images/choose2.jpg" alt="Craft workshop evening"
+              loading="lazy" onerror="this.src='assets/images/coloring-table.webp'"></div>
+          <div class="night-selector__panel-content">
+            <div class="night-selector__panel-cat">Craft Night</div>
+            <h3 class="night-selector__panel-title">Making something with your hands.</h3>
+            <p class="night-selector__panel-desc">From paper art to collage, fabric to ceramics — our craft sessions
+              explore a range of hands-on techniques with guidance and quality materials provided.</p>
+            <a href="sessions.html" class="btn btn-primary btn-sm" style="margin-top:var(--space-sm)">See Craft Sessions
+              →</a>
+          </div>
+        </div>
+
+        <div class="night-selector__panel" id="panel-quiet" role="tabpanel" aria-label="Quiet Creative">
+          <div class="night-selector__panel-image"><img src="assets/images/choose3.jpg"
+              alt="Quiet creative studio session" loading="lazy"></div>
+          <div class="night-selector__panel-content">
+            <div class="night-selector__panel-cat">Quiet Creative</div>
+            <h3 class="night-selector__panel-title">Screen-free. Peaceful. Yours.</h3>
+            <p class="night-selector__panel-desc">For those who prefer a calmer atmosphere, our quiet sessions offer a
+              relaxed studio setting with ambient music, gentle pace, and space for focused individual work.</p>
+            <a href="sessions.html" class="btn btn-primary btn-sm" style="margin-top:var(--space-sm)">See Quiet Sessions
+              →</a>
+          </div>
+        </div>
+
+        <div class="night-selector__panel" id="panel-social" role="tabpanel" aria-label="Social Session">
+          <div class="night-selector__panel-image"><img src="assets/images/choose4.jpg" alt="Social coloring evening"
+              loading="lazy"></div>
+          <div class="night-selector__panel-content">
+            <div class="night-selector__panel-cat">Social Session</div>
+            <h3 class="night-selector__panel-title">Creativity is better together.</h3>
+            <p class="night-selector__panel-desc">Social sessions prioritize conversation alongside creativity. The
+              perfect evening for friends, dates, or meeting new people over shared creative activity.</p>
+            <a href="sessions.html" class="btn btn-primary btn-sm" style="margin-top:var(--space-sm)">See Social
+              Sessions →</a>
+          </div>
+        </div>
+
+        <div class="night-selector__panel" id="panel-seasonal" role="tabpanel" aria-label="Seasonal Special">
+          <div class="night-selector__panel-image"><img src="assets/images/choose5.jpg"
+              alt="Seasonal themed creative session" loading="lazy"
+              onerror="this.src='assets/images/coloring-table.webp'"></div>
+          <div class="night-selector__panel-content">
+            <div class="night-selector__panel-cat">Seasonal Special</div>
+            <h3 class="night-selector__panel-title">Tied to the season, made to remember.</h3>
+            <p class="night-selector__panel-desc">Our seasonal specials celebrate the time of year with curated
+              palettes, seasonal materials, and themed activities that capture the mood of the moment.</p>
+            <a href="sessions.html" class="btn btn-primary btn-sm" style="margin-top:var(--space-sm)">See Seasonal
+              Sessions →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SECTION 04 — FROM ARRIVAL TO FINISHED PIECE ===================== -->
+  <section class="section" style="background:var(--color-surface)" aria-labelledby="journey-title">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <div class="section-header__label">The Journey</div>
+        <h2 class="section-header__title" id="journey-title">From Arrival to Finished Piece.</h2>
+      </div>
+
+      <div class="journey reveal" aria-label="Evening experience journey">
+        <div class="journey__steps" role="tablist" aria-label="Journey steps">
+          <div class="journey__step active" role="tab" aria-selected="true" tabindex="0">
+            <div class="journey__step-num" aria-hidden="true">01</div>
+            <div>
+              <div class="journey__step-title">Arrive</div>
+              <div class="journey__step-desc">Find your seat at the table</div>
+            </div>
+          </div>
+          <div class="journey__step" role="tab" aria-selected="false" tabindex="0">
+            <div class="journey__step-num" aria-hidden="true">02</div>
+            <div>
+              <div class="journey__step-title">Choose</div>
+              <div class="journey__step-desc">Pick your project for the evening</div>
+            </div>
+          </div>
+          <div class="journey__step" role="tab" aria-selected="false" tabindex="0">
+            <div class="journey__step-num" aria-hidden="true">03</div>
+            <div>
+              <div class="journey__step-title">Create</div>
+              <div class="journey__step-desc">Make something with your hands</div>
+            </div>
+          </div>
+          <div class="journey__step" role="tab" aria-selected="false" tabindex="0">
+            <div class="journey__step-num" aria-hidden="true">04</div>
+            <div>
+              <div class="journey__step-title">Chat</div>
+              <div class="journey__step-desc">Connect with the people around you</div>
+            </div>
+          </div>
+          <div class="journey__step" role="tab" aria-selected="false" tabindex="0">
+            <div class="journey__step-num" aria-hidden="true">05</div>
+            <div>
+              <div class="journey__step-title">Take It Home</div>
+              <div class="journey__step-desc">Leave with a finished creation</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey__display">
+          <div class="journey__panel active" id="journey-panel-0" role="tabpanel">
+            <div class="journey__panel-inner">
+              <img src="assets/images/journey1.jpg" alt=""
+                style="width:100%;height:250px;object-fit:cover;border-radius:8px;margin-bottom:16px;">
+              <h3 class="journey__panel-title">Arrive & Settle In</h3>
+              <p class="journey__panel-desc">Walk in, find your name at the table, and settle into your creative space
+                for the evening. Everything you need is waiting for you.</p>
+            </div>
+          </div>
+          <div class="journey__panel" id="journey-panel-1" role="tabpanel">
+            <div class="journey__panel-inner">
+              <img src="assets/images/journey2.jpg" alt=""
+                style="width:100%;height:250px;object-fit:cover;border-radius:8px;margin-bottom:16px;">
+              <h3 class="journey__panel-title">Choose Your Project</h3>
+              <p class="journey__panel-desc">Browse the evening's selection and pick the project that speaks to you. No
+                rules — just your instincts and the materials in front of you.</p>
+            </div>
+          </div>
+          <div class="journey__panel" id="journey-panel-2" role="tabpanel">
+            <div class="journey__panel-inner">
+              <img src="assets/images/journey3.jpg" alt=""
+                style="width:100%;height:250px;object-fit:cover;border-radius:8px;margin-bottom:16px;">
+              <h3 class="journey__panel-title">Create Freely</h3>
+              <p class="journey__panel-desc">Follow guidance or go your own way. Premium pencils, markers, watercolors
+                and craft tools are yours for the evening. Take your time.</p>
+            </div>
+          </div>
+          <div class="journey__panel" id="journey-panel-3" role="tabpanel">
+            <div class="journey__panel-inner">
+              <img src="assets/images/journey4.jpg" alt=""
+                style="width:100%;height:250px;object-fit:cover;border-radius:8px;margin-bottom:16px;">
+              <h3 class="journey__panel-title">Chat & Connect</h3>
+              <p class="journey__panel-desc">Something about creating side-by-side makes conversation easy. Share the
+                table, share the experience — make an unexpected connection.</p>
+            </div>
+          </div>
+          <div class="journey__panel" id="journey-panel-4" role="tabpanel">
+            <div class="journey__panel-inner">
+              <img src="assets/images/journey5.jpg" alt=""
+                style="width:100%;height:250px;object-fit:cover;border-radius:8px;margin-bottom:16px;">
+              <h3 class="journey__panel-title">Take It Home</h3>
+              <p class="journey__panel-desc">Your creation belongs to you. Leave the studio with something made by your
+                hands — proof that the evening was well spent.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SECTION 05 — MEMBERSHIP EXPERIENCE ===================== -->
+  <section class="section" aria-labelledby="membership-exp-title">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <div class="section-header__label">Membership</div>
+        <h2 class="section-header__title" id="membership-exp-title">A creative club for your calendar.</h2>
+        <p class="section-header__desc">Membership at Color & Company gives you regular access to sessions, early
+          booking, member-only events and a community of creative adults.</p>
+
+      </div>
+
+      <div class="benefits-grid reveal">
+        <div class="benefit-item">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            style="color:var(--color-primary);">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <div class="benefit-item__title">Monthly Session Access</div>
+          <p class="benefit-item__desc">Use your monthly session credits to book any regular sessions on the schedule.
+            Credits roll over for one month.</p>
+        </div>
+        <div class="benefit-item">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            style="color:var(--color-primary);">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          <div class="benefit-item__title">Early Booking</div>
+          <p class="benefit-item__desc">Members get access to session booking before it opens to the general public — so
+            you never miss a themed night.</p>
+        </div>
+        <div class="benefit-item">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            style="color:var(--color-primary);">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <div class="benefit-item__title">Member-Only Nights</div>
+          <p class="benefit-item__desc">Exclusive sessions designed just for members. Seasonal previews, guest-led
+            workshops, and special themed evenings.</p>
+        </div>
+        <div class="benefit-item">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            style="color:var(--color-primary);">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+            <polyline points="21 15 16 10 5 21"></polyline>
+          </svg>
+          <div class="benefit-item__title">Creation Gallery</div>
+          <p class="benefit-item__desc">Access your personal creation archive and browse the community gallery from your
+            member dashboard.</p>
+        </div>
+        <div class="benefit-item">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            style="color:var(--color-primary);">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+          <div class="benefit-item__title">Community Access</div>
+          <p class="benefit-item__desc">Join a community of creative adults who show up regularly, make things together,
+            and keep coming back.</p>
+        </div>
+        <div class="benefit-item">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            style="color:var(--color-primary);">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+          <div class="benefit-item__title">Guest Benefits</div>
+          <p class="benefit-item__desc">Bring a friend, partner, or colleague. Higher-tier plans include guest session
+            passes each month.</p>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:var(--space-xl)">
+        <a href="membership.html" class="btn btn-primary btn-lg">View Membership Plans →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SECTION 06 — FINAL CTA DARK ===================== -->
+  <section class="cta-dark" aria-labelledby="cta2-title"
+    style="background: linear-gradient(rgba(42,32,40,0.8), rgba(42,32,40,0.8)), url('assets/images/hero-coloring.webp') center/cover no-repeat;">
+    <div class="container" style="text-align:center">
+      <div class="section-header__label"
+        style="justify-content:center;display:flex;color:rgba(244,238,229,0.4);margin-bottom:var(--space-sm)">Creative
+        Space</div>
+      <h2 class="cta-section__title" id="cta2-title" style="color:var(--color-cream)">Make Room for<br>Something
+        Creative.</h2>
+      <p style="color:rgba(244,238,229,0.6);font-size:var(--text-md);margin-bottom:var(--space-lg)">An evening that
+        leaves you with something made — and someone new.</p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:var(--space-sm);flex-wrap:wrap">
+        <a href="sessions.html" class="btn btn-primary btn-lg">View Sessions →</a>
+        <a href="membership.html" class="btn btn-outline-light btn-lg">Become a Member</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="index.html" class="navbar__logo" aria-label="Color &amp; Company Home"
+            style="text-decoration: none; display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+            <svg class="navbar__logo-mark" viewBox="0 0 42 42" fill="none" aria-hidden="true">
+              <circle cx="21" cy="21" r="20" stroke="#C96F61" stroke-width="1.5" fill="none" />
+              <path d="M12 28 Q14 16 21 13 Q28 10 30 21 Q32 30 21 32 Q14 34 12 28Z" stroke="var(--color-text)"
+                stroke-width="1.2" fill="none" />
+              <line x1="8" y1="21" x2="34" y2="21" stroke="#C96F61" stroke-width="0.8" stroke-dasharray="2 2" />
+            </svg>
+            <div class="navbar__logo-text" style="display: flex; flex-direction: column;">
+              <span class="navbar__logo-name">Color &amp;
+                Company</span>
+            </div>
+          </a>
+          <p class="footer__brand-tagline">Make something. Meet someone. Have a night. A premium creative experience for
+            adults.</p>
+          <div class="footer__social" style="display: flex; gap: 12px; margin-top: 16px;">
+            <a href="#" onmouseover="this.style.color='#C96F61'" onmouseout="this.style.color=''"
+              style="color: var(--color-text); transition: color 0.3s;"><svg width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg></a>
+            <a href="#" onmouseover="this.style.color='#C96F61'" onmouseout="this.style.color=''"
+              style="color: var(--color-text); transition: color 0.3s;"><svg width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg></a>
+            <a href="#" onmouseover="this.style.color='#C96F61'" onmouseout="this.style.color=''"
+              style="color: var(--color-text); transition: color 0.3s;"><svg width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">Explore</div>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="home-2.html" class="footer__link">Home 2</a></li>
+            <li><a href="sessions.html" class="footer__link">Sessions</a></li>
+            <li><a href="private-events.html" class="footer__link">Private Events</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Support</div>
+          <ul class="footer__links">
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+            <li><a href="about.html" class="footer__link">About</a></li>
+            <li><a href="coming-soon.html" class="footer__link">Accessibility</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Creative Nights, New Themes & Club News</div>
+          <p class="footer__newsletter-desc">Stay in the loop with upcoming sessions and member news.</p>
+          <form class="footer__newsletter-form" aria-label="Newsletter signup"
+            onsubmit="event.preventDefault();showToast('Subscribed! Demo only — no email recorded.')">
+            <input type="email" class="footer__newsletter-input" placeholder="Email Address"
+              aria-label="Your email address">
+            <button type="submit" class="footer__newsletter-btn">Subscribe →</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 Color & Company. All rights reserved. <em>Fictional demonstration
+            business.</em></p>
+
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24"
+      fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+      <path d="m18 15-6-6-6 6" />
+    </svg></button>
+
+  <!-- Booking Modal (shared) -->
+  <div class="modal-overlay" id="booking-modal" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title">
+    <div class="modal modal--wide">
+      <div class="modal__header">
+        <h2 class="modal__title" id="booking-modal-title">Book a Creative Night</h2>
+        <button class="modal__close" onclick="ModalManager.close('booking-modal')" aria-label="Close">✕</button>
+      </div>
+      <div id="booking-form-content">
+        <div class="modal__body">
+          <form id="booking-form" novalidate>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label" for="booking-name">Full Name
+                  <span>*</span></label><input type="text" id="booking-name" class="form-input" required
+                  autocomplete="name"><span class="form-error" id="booking-name-error">Please enter your name.</span>
+              </div>
+              <div class="form-group"><label class="form-label" for="booking-email">Email <span>*</span></label><input
+                  type="email" id="booking-email" class="form-input" required autocomplete="email"><span
+                  class="form-error" id="booking-email-error">Please enter a valid email.</span></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label class="form-label" for="booking-phone">Phone</label><input type="tel"
+                  id="booking-phone" class="form-input" autocomplete="tel"></div>
+              <div class="form-group"><label class="form-label" for="booking-seats">Seats <span>*</span></label><select
+                  id="booking-seats" class="form-select" required>
+                  <option value="">Select</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5+</option>
+                </select><span class="form-error" id="booking-seats-error">Please select seats.</span></div>
+            </div>
+            <input type="hidden" id="booking-session" value="">
+            <div id="seat-selector" class="seat-selector"></div>
+          </form>
+        </div>
+        <div class="modal__footer">
+          <button class="btn btn-outline" onclick="ModalManager.close('booking-modal')">Maybe Later</button>
+          <button class="btn btn-primary"
+            onclick="document.getElementById('booking-form').dispatchEvent(new Event('submit',{cancelable:true,bubbles:true}))">Continue
+            →</button>
+        </div>
+      </div>
+      <div class="modal-success" id="booking-success" aria-live="polite">
+        <div class="modal-success__icon">✓</div>
+        <h3 class="modal-success__title">Booking Request Prepared</h3>
+        <p class="modal-success__desc">Demo booking added. No real reservation made.</p>
+        <button class="btn btn-primary" onclick="ModalManager.close('booking-modal')">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
