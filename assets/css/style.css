@@ -4697,3 +4697,240 @@ img[src=""] {
 .sidebar__header-close {
   display: none;
 }
+
+
+/* ============================================================
+   CLIENT REVIEW FIXES — ADULT COLORING & CRAFT NIGHT
+   ============================================================ */
+
+/* Home 1: let the photography show through the hero overlay. */
+.hero__bg::after {
+  background: linear-gradient(to bottom, rgba(42, 32, 40, .18) 0%, rgba(42, 32, 40, .10) 45%, rgba(42, 32, 40, .38) 100%) !important;
+}
+[data-theme="light"] .hero__bg::after {
+  background: linear-gradient(to bottom, rgba(42, 32, 40, .18) 0%, rgba(42, 32, 40, .10) 45%, rgba(42, 32, 40, .38) 100%) !important;
+}
+.hero__content { max-width: 900px; padding-inline: clamp(20px, 5vw, 72px); }
+.hero__title { text-shadow: 0 2px 18px rgba(0,0,0,.20); }
+
+/* Split experience and Home 2 hero: balanced image/text proportions and safe gutters. */
+.experience-section {
+  min-height: 0;
+  padding: clamp(44px, 6vw, 88px) max(20px, calc((100vw - 1200px) / 2));
+  gap: clamp(28px, 4vw, 64px);
+  align-items: center;
+}
+.experience-section .split-section__image {
+  height: clamp(340px, 38vw, 510px);
+  min-height: 0;
+  border-radius: 4px;
+}
+.experience-section .split-section__content {
+  padding: clamp(18px, 2vw, 32px) clamp(8px, 1.5vw, 24px);
+  background: transparent;
+}
+.experience-section .section-header__title { font-size: clamp(2rem, 3.2vw, 3.25rem); line-height: 1.12; }
+.home2-hero {
+  width: min(100% - 48px, 1280px);
+  margin: 26px auto 0;
+  min-height: 0;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .82fr);
+  gap: clamp(24px, 4vw, 60px);
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.home2-hero .hero-split__left { padding: clamp(28px, 5vw, 72px) clamp(8px, 2vw, 28px); min-width: 0; }
+.home2-hero .hero-split__right { height: clamp(360px, 42vw, 560px); min-height: 0; }
+.home2-hero .hero-split__right img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.home2-hero .hero-split__title { line-height: 1.08; padding-block: .08em .16em; overflow: visible; }
+.home2-hero .hero-split__subtitle { max-width: 48ch; }
+
+ /* Interactive table: keep the photo visible and allow hover labels to escape the image bounds. */
+.creative-table, .tabletop {
+  overflow: visible !important;
+  isolation: isolate;
+  background: transparent;
+  aspect-ratio: 16 / 9;
+  margin-top: 22px;
+}
+.creative-table > img, .tabletop > img {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 14px 36px rgba(42,32,40,.12);
+}
+.tabletop__hotspot { z-index: 5; }
+.tabletop__tooltip {
+  min-width: 200px;
+  max-width: min(260px, 72vw);
+  background: rgba(42,32,40,.96);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.22);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+}
+.tabletop__hotspot.hovered .tabletop__tooltip,
+.tabletop__hotspot:focus .tabletop__tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+.tabletop__hotspot:nth-of-type(2) .tabletop__tooltip,
+.tabletop__hotspot:nth-of-type(3) .tabletop__tooltip,
+.tabletop__hotspot:nth-of-type(6) .tabletop__tooltip {
+  inset-inline-start: auto;
+  inset-inline-end: 0;
+}
+.tabletop__hotspot { outline-offset: 4px; }
+
+/* About page: full visual redesign with consistent page gutters and image/text balance. */
+.about-hero .page-hero__content { width: min(100% - 40px, 1120px); margin-inline: auto; padding-block: clamp(72px, 9vw, 132px); }
+.about-hero .page-hero__title { max-width: 780px; line-height: 1.12; padding-block: .08em .14em; }
+.about-hero .page-hero__desc { max-width: 650px; }
+.about-split {
+  width: min(100% - 48px, 1200px);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .92fr);
+  align-items: center;
+  gap: clamp(30px, 6vw, 88px);
+}
+.about-split-reverse { grid-template-columns: minmax(0, .92fr) minmax(0, 1fr); }
+.about-image { min-width: 0; height: clamp(300px, 38vw, 500px); overflow: hidden; border-radius: 4px; background: var(--color-surface-2); }
+.about-image img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.about-copy { max-width: 580px; }
+.about-copy .section-header__title { line-height: 1.14; margin: 10px 0 20px; }
+.about-copy p, .about-final-inner p { color: var(--color-text-muted); line-height: 1.85; margin-bottom: 16px; }
+.about-centered { width: min(100% - 48px, 1100px); margin-inline: auto; text-align: center; }
+.about-centered .section-header__desc { max-width: 740px; margin: 14px auto 0; line-height: 1.8; }
+.about-philosophy { background: var(--color-surface); }
+.about-principles { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: clamp(20px,3vw,40px); margin-top: 46px; text-align: left; }
+.about-principles article { padding: 24px 0 0; border-top: 1px solid var(--color-border); }
+.about-step { color: var(--color-primary); font-size: .8rem; letter-spacing: .12em; font-weight: 700; }
+.about-principles h3, .about-value-grid h3 { font-family: var(--font-heading); font-size: 1.45rem; margin: 14px 0 10px; color: var(--color-heading); }
+.about-principles p, .about-value-grid p { color: var(--color-text-muted); line-height: 1.75; margin: 0; }
+.about-checklist { padding-inline-start: 1.25rem; color: var(--color-text-muted); line-height: 1.9; }
+.about-checklist li { padding-inline-start: 4px; margin-bottom: 7px; }
+.about-checklist li::marker { color: var(--color-primary); }
+.about-value-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: clamp(20px,3vw,36px); margin-top: 36px; }
+.about-value-grid article { min-width: 0; }
+.about-value-grid img { width: 100%; height: clamp(180px,22vw,270px); object-fit: cover; display: block; margin-bottom: 20px; }
+.about-value-grid h3 { margin-top: 0; }
+.about-final { background: var(--color-surface); }
+.about-final-inner { width: min(100% - 48px, 1200px); margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 36px; padding-block: 18px; }
+.about-final-inner > div { max-width: 700px; }
+.about-final-inner .section-header__title { line-height: 1.14; margin: 8px 0 12px; }
+
+/* Sessions category chips share one continuous background and tighter vertical rhythm. */
+.session-categories { padding-block: 22px !important; }
+.session-categories .container { padding-block: 0; }
+.session-categories .gallery-filters { gap: 8px; }
+.session-categories .filter-btn { margin: 0; }
+
+/* Contact form expanded fields keep native controls visually consistent. */
+#contact-form .form-row { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+#contact-form .form-group { min-width: 0; margin-bottom: 18px; }
+#contact-form .form-input, #contact-form .form-textarea { width: 100%; max-width: 100%; box-sizing: border-box; }
+#contact-form select.form-input { min-height: 48px; }
+
+/* Dashboard sidebar and top header alignment, plus a consistent sign-out icon. */
+.sidebar { min-width: 0; }
+.sidebar__header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.sidebar__logo { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.sidebar__logo-name { line-height: 1.2; }
+.sidebar__nav-link { display: flex; align-items: center; gap: 12px; }
+.sidebar__nav-link-icon { display: inline-flex; align-items: center; justify-content: center; width: 22px; min-width: 22px; line-height: 1; }
+.sidebar__nav-link-icon svg { display: block; }
+.sidebar__signout { align-items: center; }
+.dashboard-desktop-header { min-height: 64px; box-sizing: border-box; }
+.dashboard__main { min-width: 0; }
+
+/* Tablet navigation: align brand, menu toggle, and action group without squeezing content. */
+.navbar { width: 100%; }
+.navbar__inner { min-height: 72px; justify-content: space-between; gap: 14px; }
+.navbar__actions { display: flex; align-items: center; justify-content: flex-end; gap: 10px; margin-inline-start: auto; flex-shrink: 0; }
+.navbar__hamburger { flex-shrink: 0; align-items: center; justify-content: center; margin-inline-start: 0; }
+.mobile-drawer { top: 0; }
+.mobile-drawer__cta { padding-bottom: 16px; }
+
+@media (max-width: 1024px) {
+  .navbar__inner { width: calc(100% - 32px); }
+  .navbar__logo { gap: 8px; }
+  .navbar__logo-mark { width: 36px; height: 36px; }
+  .navbar__actions { margin-inline-start: auto; }
+}
+@media (max-width: 767px) {
+  .experience-section { grid-template-columns: 1fr; padding: 42px 20px; gap: 24px; }
+  .experience-section .split-section__image { height: clamp(260px, 75vw, 390px); }
+  .experience-section .split-section__content { padding: 8px 0 0; }
+  .home2-hero { width: calc(100% - 32px); margin-top: 16px; grid-template-columns: 1fr; gap: 0; }
+  .home2-hero .hero-split__left { padding: 34px 24px 30px; }
+  .home2-hero .hero-split__right { height: clamp(260px, 75vw, 380px); }
+  .about-split, .about-split-reverse { width: calc(100% - 36px); grid-template-columns: 1fr; gap: 26px; }
+  .about-split-reverse .about-copy { order: 2; }
+  .about-split-reverse .about-image { order: 1; }
+  .about-image { height: clamp(240px, 72vw, 380px); }
+  .about-centered { width: calc(100% - 36px); }
+  .about-principles, .about-value-grid { grid-template-columns: 1fr; gap: 28px; }
+  .about-value-grid img { height: 240px; }
+  .about-final-inner { width: calc(100% - 36px); flex-direction: column; align-items: flex-start; }
+  #contact-form .form-row { grid-template-columns: 1fr; gap: 0; }
+  .tabletop__hotspot { width: 30px; height: 30px; }
+  .tabletop__tooltip { min-width: 160px; font-size: .8rem; }
+  .session-categories { padding-block: 16px !important; }
+}
+
+
+.tabletop__tooltip { inset-inline-start: 24px; top: -12px; color: #fff !important; }
+.tabletop__tooltip-detail { color: rgba(255,255,255,.82); }
+.tabletop__hotspot:nth-of-type(2) .tabletop__tooltip,
+.tabletop__hotspot:nth-of-type(3) .tabletop__tooltip,
+.tabletop__hotspot:nth-of-type(6) .tabletop__tooltip { inset-inline-start: auto; inset-inline-end: 24px; }
+@media (max-width: 767px) {
+  .tabletop__tooltip { inset-inline-start: 18px; top: -8px; }
+  .tabletop__hotspot:nth-of-type(2) .tabletop__tooltip,
+  .tabletop__hotspot:nth-of-type(3) .tabletop__tooltip,
+  .tabletop__hotspot:nth-of-type(6) .tabletop__tooltip { inset-inline-start: auto; inset-inline-end: 18px; }
+}
+
+/* ============================================================
+   OVERRIDES — Home1 hero white text (light mode) & sessions spacing
+   ============================================================ */
+
+/* Keep the dark photo overlay in light mode so hero text stays readable */
+[data-theme="light"] .hero__bg::after {
+  background: linear-gradient(to bottom,
+      rgba(30, 22, 28, 0.65) 0%,
+      rgba(30, 22, 28, 0.45) 40%,
+      rgba(30, 22, 28, 0.8) 100%) !important;
+}
+
+/* Force hero title & subtitle white in both themes */
+.hero__title {
+  color: #ffffff !important;
+}
+
+.hero__subtitle {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+[data-theme="light"] .hero__title {
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .hero__subtitle {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+/* Reduce padding above the Upcoming Sessions section on the sessions page */
+.sessions-list-section {
+  padding-top: var(--space-md) !important;
+}
+
+.sessions-list-section .section-header {
+  margin-bottom: var(--space-sm);
+}
