@@ -1025,8 +1025,18 @@ const TabletopManager = (() => {
       el.addEventListener('keydown', e => {
         if (e.key === 'Enter') el.classList.toggle('hovered');
       });
+      el.addEventListener('click', e => {
+        e.stopPropagation();
+        const wasHovered = el.classList.contains('hovered');
+        container.querySelectorAll('.tabletop__hotspot').forEach(h => h.classList.remove('hovered'));
+        if (!wasHovered) el.classList.add('hovered');
+      });
 
       container.appendChild(el);
+    });
+
+    document.addEventListener('click', () => {
+      container.querySelectorAll('.tabletop__hotspot').forEach(h => h.classList.remove('hovered'));
     });
   }
 
