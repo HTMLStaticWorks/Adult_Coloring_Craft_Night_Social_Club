@@ -109,11 +109,10 @@
     </div>
   </aside>
 
-  <!-- ===================== SECTION 01 — PAGE HERO ===================== -->/
+  <!-- ===================== SECTION 01 — PAGE HERO ===================== -->
   <header class="page-hero" role="banner"
     style="background: linear-gradient(rgba(42,32,40,0.85), rgba(42,32,40,0.85)), url('assets/images/session-hero.jpg') center/cover no-repeat;">
     <div class="page-hero__content">
-      <div class="page-hero__label">Studio Schedule</div>
       <h1 class="page-hero__title">What's Happening at the Studio.</h1>
       <p class="page-hero__desc">Explore upcoming coloring nights, craft sessions and themed creative gatherings. All
         data shown is sample — fictional demonstration.</p>
@@ -121,25 +120,27 @@
   </header>
 
   <!-- ===================== SECTION 02 — FILTERS ===================== -->
-  <section class="section-sm" style="background:var(--color-surface);border-bottom:1px solid var(--color-border)"
-    aria-label="Session filters">
+  <section class="section-sm session-categories" aria-label="Session filters">
     <div class="container">
-      <div class="gallery-filters" role="group" aria-label="Filter sessions by type" style="justify-content: center;">
-        <button class="filter-btn active" data-filter="all" aria-pressed="true">All Sessions</button>
-        <button class="filter-btn" data-filter="coloring" aria-pressed="false">Coloring</button>
-        <button class="filter-btn" data-filter="craft" aria-pressed="false">Craft</button>
-        <button class="filter-btn" data-filter="social" aria-pressed="false">Social</button>
-        <button class="filter-btn" data-filter="seasonal" aria-pressed="false">Seasonal</button>
-      </div>
+
 
     </div>
   </section>
 
   <!-- ===================== SECTION 03 — SESSION LIST ===================== -->
-  <section class="section" aria-labelledby="sessions-list-title">
+  <section class="section sessions-list-section" aria-labelledby="sessions-list-title">
     <div class="container">
+
       <div class="section-header section-header--center">
         <h2 class="section-header__title" id="sessions-list-title">Upcoming Sessions</h2>
+      </div>
+      <div class="gallery-filters" role="group" aria-label="Filter sessions by type"
+        style="justify-content: center;padding-top: 20px;">
+        <button class="filter-btn active" data-filter="all" aria-pressed="true">All Sessions</button>
+        <button class="filter-btn" data-filter="coloring" aria-pressed="false">Coloring</button>
+        <button class="filter-btn" data-filter="craft" aria-pressed="false">Craft</button>
+        <button class="filter-btn" data-filter="social" aria-pressed="false">Social</button>
+        <button class="filter-btn" data-filter="seasonal" aria-pressed="false">Seasonal</button>
       </div>
       <!-- Rendered by JS -->
       <div id="sessions-list" aria-live="polite" aria-label="Session list"></div>
@@ -156,8 +157,10 @@
       <p class="text-lead" style="margin-bottom:var(--space-lg);max-width:540px;margin-inline:auto">Ask about private
         sessions, group events or upcoming themed nights not yet on the schedule.</p>
       <div style="display:flex;align-items:center;justify-content:center;gap:var(--space-sm);flex-wrap:wrap">
-        <a href="private-events.html" class="btn btn-primary" style="width: 200px; justify-content: center;">Private Events →</a>
-        <a href="contact.html" class="btn btn-outline" style="width: 200px; justify-content: center;">Contact the Club</a>
+        <a href="private-events.html" class="btn btn-primary" style="width: 200px; justify-content: center;">Private
+          Events →</a>
+        <a href="contact.html" class="btn btn-outline" style="width: 200px; justify-content: center;">Contact the
+          Club</a>
       </div>
     </div>
   </section>
