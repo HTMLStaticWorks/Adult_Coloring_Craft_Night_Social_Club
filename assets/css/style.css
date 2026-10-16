@@ -4934,3 +4934,322 @@ img[src=""] {
 .sessions-list-section .section-header {
   margin-bottom: var(--space-sm);
 }
+
+/* ============================================================
+   FIX 1 — Home2 Hero: bg image + centered content
+   ============================================================ */
+.home2-hero {
+  width: 100% !important;
+  margin: 0 auto !important;
+  min-height: 100svh;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: unset !important;
+  border-radius: 0 !important;
+  overflow: hidden;
+  padding-top: 70px;
+  position: relative;
+}
+.home2-hero .hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.home2-hero .hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.home2-hero .hero__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+      rgba(42, 32, 40, 0.55) 0%,
+      rgba(42, 32, 40, 0.3) 40%,
+      rgba(42, 32, 40, 0.7) 100%);
+}
+.home2-hero .hero__content {
+  position: relative;
+  z-index: 2;
+}
+.home2-hero .hero-split__tag {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* ============================================================
+   FIX 2 — Home2 Membership: 2 cards/row at 1024 & tab, 1 card/row mob
+   ============================================================ */
+.membership-section .benefits-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 1024px) {
+  .membership-section .benefits-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .membership-section .benefits-grid > * {
+    grid-column: auto !important;
+  }
+}
+@media (max-width: 480px) {
+  .membership-section .benefits-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .membership-section .benefits-grid > * {
+    grid-column: 1 / -1 !important;
+  }
+}
+
+/* ============================================================
+   FIX 3 — Home1 The Work: gallery hover text visible
+   ============================================================ */
+.gallery-item__overlay {
+  opacity: 0 !important;
+  visibility: hidden;
+  background: linear-gradient(to top, rgba(20, 14, 20, 0.92) 0%, rgba(20, 14, 20, 0.55) 55%, transparent 100%) !important;
+  transition: opacity 0.35s ease, visibility 0.35s ease !important;
+  z-index: 5;
+  pointer-events: none;
+}
+.gallery-item:hover .gallery-item__overlay,
+.gallery-item:focus-within .gallery-item__overlay,
+.gallery-item:active .gallery-item__overlay {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.gallery-item__title {
+  color: #ffffff !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
+  transform: translateY(8px);
+  transition: transform 0.35s ease;
+}
+.gallery-item__meta {
+  color: rgba(244, 238, 229, 0.88) !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  transform: translateY(8px);
+  transition: transform 0.35s ease;
+}
+.gallery-item:hover .gallery-item__title,
+.gallery-item:hover .gallery-item__meta {
+  transform: translateY(0);
+}
+
+/* ============================================================
+   FIX 4 — About "Your Seat Is Waiting": button to next line on tab/mob
+   ============================================================ */
+@media (max-width: 1024px) {
+  .about-final-inner {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 24px !important;
+  }
+  .about-final-inner .btn {
+    align-self: flex-start;
+  }
+}
+
+/* ============================================================
+   FIX 5 — Footer: subscribe button next line on mobile
+   ============================================================ */
+@media (max-width: 768px) {
+  .footer__newsletter-form {
+    flex-direction: column !important;
+    border: none !important;
+    gap: 10px !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+  }
+  .footer__newsletter-input {
+    border: 1px solid var(--color-text-muted) !important;
+    border-radius: var(--border-radius-md) !important;
+    width: 100% !important;
+  }
+  .footer__newsletter-btn {
+    border-radius: var(--border-radius-md) !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding: 14px 16px !important;
+  }
+}
+
+/* ============================================================
+   FIX 6 — Tab & Mobile View: Scroll-to-Top Button Overlap Fix
+   ============================================================ */
+@media (max-width: 1024px) {
+  .back-to-top {
+    bottom: 20px !important;
+    inset-inline-end: 20px !important;
+    width: 42px !important;
+    height: 42px !important;
+    z-index: 90 !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16) !important;
+  }
+  .footer__bottom {
+    padding-bottom: 60px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 16px !important;
+    inset-inline-end: 16px !important;
+    width: 38px !important;
+    height: 38px !important;
+    z-index: 90 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18) !important;
+  }
+  .back-to-top svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  .footer__bottom {
+    padding-bottom: 75px !important;
+  }
+}
+
+/* ============================================================
+   FIX 7 — Dashboard: Logo and Right Side Parallel Alignment
+   ============================================================ */
+.dashboard-mobile-topbar {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-mobile-topbar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    min-height: 56px !important;
+    padding: 10px 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  .dashboard-mobile-topbar > a {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    text-decoration: none !important;
+    flex-shrink: 0 !important;
+  }
+
+  .dashboard-mobile-topbar .navbar__logo-mark {
+    width: 42px !important;
+    height: 42px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .dashboard-mobile-topbar .navbar__logo-name,
+  .dashboard-mobile-topbar .sidebar__logo-name {
+    font-family: var(--font-heading) !important;
+    font-size: 1.05rem !important;
+    color: var(--color-text) !important;
+    letter-spacing: 0.01em !important;
+    white-space: nowrap !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+  }
+
+  .dashboard-mobile-topbar > div {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex-shrink: 0 !important;
+    margin-inline-start: auto !important;
+  }
+
+  .sidebar__header-logo {
+    display: inline-flex !important;
+  }
+
+  .sidebar__header-close {
+    display: inline-flex !important;
+  }
+}
+
+.sidebar__header,
+.dashboard-desktop-header {
+  height: 70px !important;
+  min-height: 70px !important;
+  max-height: 70px !important;
+  box-sizing: border-box !important;
+  border-bottom: 1px solid var(--color-border) !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.sidebar__header {
+  justify-content: space-between !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  gap: 12px !important;
+  padding: 0 16px !important;
+}
+
+.dashboard-desktop-header {
+  background: var(--color-surface) !important;
+  padding: 0 var(--space-xl) !important;
+  justify-content: flex-end !important;
+}
+
+.sidebar__header-logo {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  text-decoration: none !important;
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+
+.sidebar__header-logo .navbar__logo-mark {
+  width: 42px !important;
+  height: 42px !important;
+  flex-shrink: 0 !important;
+}
+
+.sidebar__header-logo .navbar__logo-name,
+.sidebar__header-logo .sidebar__logo-name {
+  font-family: var(--font-heading) !important;
+  font-size: 1.05rem !important;
+  color: var(--color-text) !important;
+  letter-spacing: 0.01em !important;
+  white-space: nowrap !important;
+  margin: 0 !important;
+  line-height: 1 !important;
+}
+
+.sidebar__header-close {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  flex-shrink: 0 !important;
+}
+
+@media (min-width: 1025px) {
+  .sidebar__header-close {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .dashboard-mobile-topbar {
+    height: 60px !important;
+    min-height: 60px !important;
+    border-bottom: 1px solid var(--color-border) !important;
+    padding: 0 16px !important;
+  }
+
+  .sidebar__header {
+    height: 60px !important;
+    min-height: 60px !important;
+    border-bottom: 1px solid var(--color-border) !important;
+    padding: 0 16px !important;
+  }
+}
+

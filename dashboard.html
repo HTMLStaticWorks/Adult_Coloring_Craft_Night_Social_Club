@@ -21,7 +21,7 @@
 
   <!-- Mobile Topbar -->
   <header class="dashboard-mobile-topbar">
-    <a href="index.html" style="display:flex; align-items:center; gap:8px; text-decoration:none;">
+    <a href="index.html" class="navbar__logo" style="display:flex; align-items:center; gap:12px; text-decoration:none;" aria-label="Color & Company Home">
       <svg class="navbar__logo-mark" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true">
         <circle cx="21" cy="21" r="20" stroke="#C96F61" stroke-width="1.5" fill="none"></circle>
@@ -31,7 +31,9 @@
         <path d="M17 34 L19 26 L21 34" stroke="var(--color-text)" stroke-width="1.2" fill="none" stroke-linecap="round">
         </path>
       </svg>
-      <span class="sidebar__logo-name">Color & Company</span>
+      <div class="navbar__logo-text">
+        <span class="navbar__logo-name">Color & Company</span>
+      </div>
     </a>
     <div style="display: flex; gap: 8px; align-items: center;">
       <button class="btn-icon" id="notification-btn-mobile" aria-label="Notifications"
@@ -58,20 +60,19 @@
     <!-- Sidebar -->
     <div class="sidebar-overlay" id="sidebar-overlay"></div>
     <aside class="sidebar">
-      <div class="sidebar__header" style="padding: 16px; margin-top: 24px;">
-        <a href="index.html" class="sidebar__header-logo" style="text-decoration:none; align-items:center; gap:8px;">
-          <svg class="navbar__logo-mark" viewBox="0 0 42 42" fill="none" >
+      <div class="sidebar__header">
+        <a href="index.html" class="sidebar__header-logo navbar__logo" style="text-decoration:none; display: flex; align-items:center; gap:12px;" aria-label="Color & Company Home">
+          <svg class="navbar__logo-mark" viewBox="0 0 42 42" fill="none" aria-hidden="true">
             <circle cx="21" cy="21" r="20" stroke="#C96F61" stroke-width="1.5" fill="none" />
             <path d="M12 28 Q14 16 21 13 Q28 10 30 21 Q32 30 21 32 Q14 34 12 28Z" stroke="var(--color-text)"
               stroke-width="1.2" fill="none" />
             <line x1="8" y1="21" x2="34" y2="21" stroke="#C96F61" stroke-width="0.8" stroke-dasharray="2 2" />
           </svg>
-          <div>
-            <div class="sidebar__logo-name">Color & Company</div>
-
+          <div class="navbar__logo-text">
+            <span class="navbar__logo-name">Color & Company</span>
           </div>
         </a>
-        <div class="sidebar__header-close" style="justify-content: flex-end;">
+        <div class="sidebar__header-close">
           <button class="btn-icon"
             onclick="document.querySelector('.sidebar').classList.remove('active'); document.getElementById('sidebar-overlay').classList.remove('active');"
             aria-label="Close Sidebar" style="color: var(--color-text);">
@@ -126,8 +127,7 @@
     <!-- Main Content -->
     <main class="dashboard__main">
       <!-- Dashboard Top Header -->
-      <header class="dashboard-desktop-header"
-        style="background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: 12px var(--space-xl); display: flex; justify-content: flex-end; align-items: center;">
+      <header class="dashboard-desktop-header">
         <div style="display: flex; gap: 16px; align-items: center; color: var(--color-text);">
           <button class="btn-icon" data-theme-toggle aria-label="Toggle theme" style="color: var(--color-text);"><span
               class="theme-icon">🌙</span></button>
