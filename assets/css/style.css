@@ -5330,11 +5330,25 @@ img[src=""] {
 }
 
 @media (max-width: 1024px) {
+  /* Fix 3: Keep dashboard topbar fixed to top when scrolling down */
   .dashboard-mobile-topbar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
     height: 60px !important;
     min-height: 60px !important;
+    z-index: 1000 !important;
+    background: var(--color-surface) !important;
     border-bottom: 1px solid var(--color-border) !important;
     padding: 0 16px !important;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  .dashboard__main {
+    padding-top: 60px !important;
+    margin-inline-start: 0 !important;
   }
 
   .sidebar__header {
@@ -5350,7 +5364,140 @@ img[src=""] {
 }
 
 /* ============================================================
-   HOME 2 RESPONSIVE & FIXED HEADER (1024px to Mobile)
+   FIX 1: DASHBOARD BILLING & BOOKINGS RESPONSIVE SYSTEM
+   ============================================================ */
+.dashboard-billing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-md);
+  width: 100%;
+}
+
+.dashboard-bookings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-md);
+  width: 100%;
+}
+
+.dashboard-invoice-item {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-invoice-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.dashboard-booking-actions,
+.dashboard-payment-action {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.dashboard-booking-actions .btn,
+.btn-update-payment {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .dashboard-billing-grid,
+  .dashboard-bookings-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 16px !important;
+  }
+
+  .dashboard-billing-grid .dashboard-card,
+  .dashboard-bookings-grid .dashboard-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .dashboard-tab {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .dashboard-card {
+    padding: 18px 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    border-radius: var(--border-radius-md) !important;
+  }
+
+  .dashboard-booking-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+    padding: 0 12px !important;
+    box-sizing: border-box !important;
+  }
+
+  .dashboard-payment-action {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    padding: 0 12px !important;
+    box-sizing: border-box !important;
+  }
+
+  .dashboard-booking-actions .btn,
+  .btn-update-payment {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    padding: 12px 18px !important;
+    font-size: 0.95rem !important;
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-content {
+    padding: 12px !important;
+  }
+
+  .dashboard-card {
+    padding: 16px 14px !important;
+  }
+
+  .dashboard-booking-actions,
+  .dashboard-payment-action {
+    padding: 0 8px !important;
+  }
+}
+
+/* ============================================================
+   FIX 3: TABLET & MOBILE NAVBAR SCROLL (Stay Fixed at Top)
    ============================================================ */
 html {
   scroll-padding-top: 70px;
@@ -5361,7 +5508,7 @@ html {
     scroll-padding-top: 70px;
   }
 
-  /* 2. Fixed Header from 1024px down to mobile */
+  /* Fixed Header from 1024px down to mobile */
   .navbar {
     position: fixed !important;
     top: 0 !important;
@@ -5397,8 +5544,10 @@ html {
     flex-shrink: 0 !important;
   }
 
-  /* 1. Home 2 Sections Responsiveness */
+  /* Home 2 Tablet Baseline */
   .home2-hero {
+    width: 100% !important;
+    margin: 0 !important;
     padding-top: 70px !important;
     min-height: 100svh !important;
   }
@@ -5412,16 +5561,11 @@ html {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: var(--space-md) !important;
   }
-
-  .journey {
-    min-height: 420px;
-  }
-
-  .journey__panel-inner {
-    padding: var(--space-lg) var(--space-md);
-  }
 }
 
+/* ============================================================
+   FIX 2: HOME 2 MOBILE RESPONSIVENESS & EXPANDED JOURNEY CARDS
+   ============================================================ */
 @media (max-width: 768px) {
   .section {
     padding-top: 60px !important;
@@ -5432,8 +5576,15 @@ html {
     font-size: clamp(1.85rem, 5vw, 2.5rem) !important;
   }
 
+  .home2-hero {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
   .tabletop {
     aspect-ratio: 16/10;
+    max-width: 100% !important;
+    overflow: hidden !important;
   }
 
   .tabletop__tooltip {
@@ -5443,8 +5594,80 @@ html {
     padding: 8px 12px;
   }
 
+  /* Journey Section: Expand Cards to full available container width */
+  .journey {
+    display: block !important;
+    width: 100% !important;
+    min-height: auto !important;
+    border: none !important;
+    background: transparent !important;
+    overflow: visible !important;
+  }
+
+  .journey__steps {
+    display: none !important;
+  }
+
   .journey__display {
-    padding: var(--space-sm) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .journey__panel {
+    display: block !important;
+    position: static !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--border-radius-lg) !important;
+    padding: 22px !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05) !important;
+  }
+
+  .journey__panel-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .journey__panel-inner img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: clamp(210px, 58vw, 290px) !important;
+    object-fit: cover !important;
+    border-radius: var(--border-radius-md) !important;
+    margin-bottom: 16px !important;
+    display: block !important;
+  }
+
+  .journey__panel-title {
+    font-family: var(--font-heading) !important;
+    font-size: clamp(1.3rem, 4vw, 1.55rem) !important;
+    color: var(--color-heading) !important;
+    margin-bottom: 8px !important;
+    line-height: 1.25 !important;
+  }
+
+  .journey__panel-desc {
+    max-width: 100% !important;
+    width: 100% !important;
+    font-size: 0.95rem !important;
+    color: var(--color-text-muted) !important;
+    line-height: 1.65 !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
   }
 }
 
@@ -5456,10 +5679,8 @@ html {
 
   .benefit-item {
     padding: var(--space-md) var(--space-sm) !important;
-  }
-
-  .journey__panel-inner img {
-    height: 190px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .cta-dark {
@@ -5470,6 +5691,11 @@ html {
 @media (max-width: 480px) {
   html {
     scroll-padding-top: 64px;
+  }
+
+  .container {
+    width: calc(100% - 24px) !important;
+    max-width: 100% !important;
   }
 
   .navbar {
@@ -5511,5 +5737,45 @@ html {
     font-size: 0.75rem;
     padding: 6px 10px;
   }
+
+  .journey__panel {
+    padding: 16px 14px !important;
+  }
+
+  .journey__panel-inner img {
+    height: 195px !important;
+  }
 }
+
+/* ============================================================
+   FIX 4: PROFESSIONAL AUTH SOCIAL BUTTONS
+   ============================================================ */
+.auth-social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-social-btn {
+  font-weight: 500;
+  font-size: 0.92rem;
+  padding: 10px 16px;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.auth-social-btn:hover {
+  background: var(--color-surface-2);
+  border-color: var(--color-text-muted);
+  transform: translateY(-1px);
+}
+
 
